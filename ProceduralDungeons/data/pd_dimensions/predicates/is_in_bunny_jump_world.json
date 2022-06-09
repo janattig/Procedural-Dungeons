@@ -1,6 +1,6 @@
 {
   "condition": "minecraft:location_check",
   "predicate": {
-    "dimension": "procedural_dungeons:bunny_jump_world"
+    "dimension": "pd_dimensions:bunny_jump_world"
   }
 }

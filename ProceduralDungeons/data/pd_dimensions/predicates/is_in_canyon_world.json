@@ -1,6 +1,6 @@
 {
   "condition": "minecraft:location_check",
   "predicate": {
-    "dimension": "procedural_dungeons:canyon_world"
+    "dimension": "pd_dimensions:canyon_world"
   }
 }

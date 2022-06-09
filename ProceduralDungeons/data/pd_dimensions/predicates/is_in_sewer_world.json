@@ -1,6 +1,6 @@
 {
   "condition": "minecraft:location_check",
   "predicate": {
-    "dimension": "procedural_dungeons:sewer_world"
+    "dimension": "pd_dimensions:sewer_world"
   }
 }

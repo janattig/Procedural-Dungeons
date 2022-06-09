@@ -1,6 +1,6 @@
 {
   "condition": "minecraft:location_check",
   "predicate": {
-    "dimension": "procedural_dungeons:skyblock_world"
+    "dimension": "pd_dimensions:skyblock_world"
   }
 }
