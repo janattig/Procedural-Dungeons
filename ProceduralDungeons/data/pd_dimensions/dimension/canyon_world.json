@@ -1,0 +1,105 @@
+{
+  "type": {
+    "name": "procedural_dungeons:cave_world",
+    "ultrawarm": false,
+    "natural": false,
+    "piglin_safe": false,
+    "respawn_anchor_works": false,
+    "bed_works": false,
+    "has_raids": true,
+    "has_skylight": true,
+    "has_ceiling": false,
+    "coordinate_scale": 1,
+    "ambient_light": 0,
+    "fixed_time": 4500,
+    "logical_height": 256,
+    "height": 256,
+    "min_y": 0,
+    "infiniburn": "#minecraft:infiniburn_overworld"
+  },
+  "generator": {
+    "type": "minecraft:flat",
+    "seed": -1663031682,
+    "settings": {
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        },
+        {
+          "block": "minecraft:stone",
+          "height": 1
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "height": 67
+        },
+        {
+          "block": "minecraft:stone",
+          "height": 3
+        },
+        {
+          "block": "minecraft:terracotta",
+          "height": 2
+        },
+        {
+          "block": "minecraft:brown_terracotta",
+          "height": 2
+        },
+        {
+          "block": "minecraft:terracotta",
+          "height": 1
+        },
+        {
+          "block": "minecraft:white_terracotta",
+          "height": 1
+        },
+        {
+          "block": "minecraft:terracotta",
+          "height": 2
+        },
+        {
+          "block": "minecraft:red_terracotta",
+          "height": 1
+        },
+        {
+          "block": "minecraft:terracotta",
+          "height": 1
+        },
+        {
+          "block": "minecraft:yellow_terracotta",
+          "height": 1
+        },
+        {
+          "block": "minecraft:white_terracotta",
+          "height": 1
+        },
+        {
+          "block": "minecraft:terracotta",
+          "height": 2
+        },
+        {
+          "block": "minecraft:brown_terracotta",
+          "height": 1
+        },
+        {
+          "block": "minecraft:gray_terracotta",
+          "height": 1
+        },
+        {
+          "block": "minecraft:terracotta",
+          "height": 2
+        },
+        {
+          "block": "minecraft:red_sand",
+          "height": 1
+        }
+      ],
+      "structures": {
+        "structures": {}
+      }
+    }
+  }
+}
