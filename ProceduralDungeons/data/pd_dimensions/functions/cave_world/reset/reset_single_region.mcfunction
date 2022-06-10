@@ -1,3 +1,4 @@
+# resets the first recorded region of the cave world
 # needs to be executed in cave world
 
 # summon a temporary marker at the current position
@@ -13,8 +14,9 @@ execute store result score %reset_region_size pd_dimension_cave run data get sto
 
 # choose how to reset depending on region size
 execute if score %reset_region_size pd_dimension_cave matches 11 as @e[type=marker, tag=pd_dim_reset_marker_cave_tmp, limit=1, sort=nearest] at @s run function pd_dimensions:cave_world/reset/reset_11x11_here
-# probably missed the size while storing
-execute if score %reset_region_size pd_dimension_cave matches -1 as @e[type=marker, tag=pd_dim_reset_marker_cave_tmp, limit=1, sort=nearest] at @s run say missing size?
+# probably missed the size while storing, execute 11x11 as a fallback
+execute unless score %reset_region_size pd_dimension_cave matches 11 as @e[type=marker, tag=pd_dim_reset_marker_cave_tmp, limit=1, sort=nearest] at @s run tellraw @a ["",{"text":"> "},{"text":"PD DIM (cave) ERROR:","color":"red"},{"text":" unable to reset "},{"score":{"name":"%reset_region_size","objective":"pd_dimension_cave"},"color":"red"},{"text":"x"},{"score":{"name":"%reset_region_size","objective":"pd_dimension_cave"},"color":"red"},{"text":" region"}]
+#execute unless score %reset_region_size pd_dimension_cave matches 11 as @e[type=marker, tag=pd_dim_reset_marker_cave_tmp, limit=1, sort=nearest] at @s run function pd_dimensions:cave_world/reset/reset_11x11_here
 
 # reset temporary score
 scoreboard players reset %reset_region_size pd_dimension_cave
