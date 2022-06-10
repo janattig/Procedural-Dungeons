@@ -12,5 +12,5 @@ scoreboard objectives add pd_dimension_cave dummy
 scoreboard players set %has_been_modified pd_dimension_cave 0
 
 
-# designate memory for where rooms are (for later reset)
-data modify storage pd_dimensions:cave_world/reset regions_11x11 set value []
+# designate memory for where rooms are (for later reset, only if not designated already)
+execute unless data storage pd_dimensions:cave_world reset_regions run data modify storage pd_dimensions:cave_world reset_regions set value []
