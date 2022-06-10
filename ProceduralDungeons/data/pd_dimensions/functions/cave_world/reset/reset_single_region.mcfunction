@@ -1,3 +1,5 @@
+# needs to be executed in cave world
+
 # summon a temporary marker at the current position
 summon marker ~ ~ ~ {Tags:["pd_dim_reset_marker_cave_tmp"]}
 
@@ -5,6 +7,7 @@ summon marker ~ ~ ~ {Tags:["pd_dim_reset_marker_cave_tmp"]}
 execute store result entity @e[type=marker, tag=pd_dim_reset_marker_cave_tmp, limit=1, sort=nearest] Pos[0] double 1 run data get storage pd_dimensions:cave_world reset_regions[0][0] 1
 execute store result entity @e[type=marker, tag=pd_dim_reset_marker_cave_tmp, limit=1, sort=nearest] Pos[2] double 1 run data get storage pd_dimensions:cave_world reset_regions[0][2] 1
 # load the region size to a temporary scoreboard value
+scoreboard players set %reset_region_size pd_dimension_cave -1
 execute store result score %reset_region_size pd_dimension_cave run data get storage pd_dimensions:cave_world reset_regions[0][1] 1
 
 
