@@ -1,5 +1,5 @@
 # function to reset the ENTIRE cave world (according to data stored)
-# works by calling this function until all data is empty
+# works by this function scheduling itself again until all data is empty
 
 # reset the first region
 execute if score %has_been_modified pd_dimension_cave matches 1 in pd_dimensions:cave_world run function pd_dimensions:cave_world/reset/reset_single_region
