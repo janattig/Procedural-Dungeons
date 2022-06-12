@@ -33,4 +33,5 @@ scoreboard players set %reset_region_size pd_dimension_parameters -1
 
 
 # let individual worlds setup
+function pd_dimensions:canyon_world/setup
 function pd_dimensions:cave_world/setup
