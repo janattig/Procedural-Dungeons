@@ -27,12 +27,12 @@ Dimension sub-repo of the Procedural Dungeons pack. Provides the different dimen
 
 In case you want to extend this package and add your own dimension, you have to modify the following:
 
-1. Provide a new dimension file in the [dimensions](dimensions/) folder, following the [specifications](https://minecraft.fandom.com/wiki/Custom_dimension) for custom dimensions in Minecraft. Naming convention currently is `YOUR_NAME_world`.
+1. Provide a new *dimension file* in the [dimension](dimension/) folder, following the [specifications](https://minecraft.fandom.com/wiki/Custom_dimension) for custom dimensions in Minecraft. Naming convention currently is `your_name_world`.
 
-2. Provide a new predicate in the [predicates](predicates/) folder which checks if a function call is inside your custom dimension. Naming convention currently is `is_in_YOUR_NAME_world`.
+2. Provide a new *predicate* in the [predicates](predicates/) folder which checks if a function call is inside your custom dimension. Naming convention currently is `is_in_your_name_world`.
 
-3. Initialize the dimension at the end of the [`install`](functions/general_setup/install.mcfunction) file similar to how all other dimensions are initialized. You have to provide a custom number as well as setup the forceloading.
+3. *Initialize* the dimension at the end of the [`install`](functions/general_setup/install.mcfunction) file similar to how all other dimensions are initialized. You have to provide a custom number as well as setup the forceloading.
 
-4. Extend dimension checks via scoreboards in the function `pd_dimensions:set_current_dimension_scoreboard`, which can be found [here](functions/set_current_dimension_scoreboard.mcfunction), by adding a new line at the bottom.
+4. Extend *dimension checks via scoreboards* in the function `pd_dimensions:set_current_dimension_scoreboard`, which can be found [here](functions/set_current_dimension_scoreboard.mcfunction), by adding a new line at the bottom.
 
-5. Extend teleporting to custom dimensions by scoreboards in the function `pd_dimensions:tp_self_to_target_dimension`, which can be found [here](functions/tp_self_to_target_dimension.mcfunction), by adding a new line at the bottom.
+5. Extend *teleporting* to custom dimensions by scoreboards in the function `pd_dimensions:tp_self_to_target_dimension`, which can be found [here](functions/tp_self_to_target_dimension.mcfunction), by adding a new line at the bottom.
