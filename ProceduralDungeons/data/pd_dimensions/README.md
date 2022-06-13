@@ -36,3 +36,6 @@ In case you want to extend this package and add your own dimension, you have to 
 4. Extend *dimension checks via scoreboards* in the function `pd_dimensions:set_current_dimension_scoreboard`, which can be found [here](functions/set_current_dimension_scoreboard.mcfunction), by adding a new line at the bottom.
 
 5. Extend *teleporting* to custom dimensions by scoreboards in the function `pd_dimensions:tp_self_to_target_dimension`, which can be found [here](functions/tp_self_to_target_dimension.mcfunction), by adding a new line at the bottom.
+
+
+The entirety of the *region reset* logic is already generalized to all dimensions and does not need adjustment if you add a new dimension. This is achieved by relying on the functions `pd_dimensions:set_current_dimension_scoreboard` and `pd_dimensions:tp_self_to_target_dimension` to determine and locate to all dimensions.
