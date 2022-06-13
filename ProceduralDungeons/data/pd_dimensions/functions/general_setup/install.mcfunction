@@ -41,52 +41,40 @@ execute in minecraft:overworld run forceload add ~ ~
 ### bunny_jump ###
 # set the dimension number
 scoreboard players set %bunny_jump_world pd_dimensions 5
-# forceload origin
-execute in pd_dimensions:bunny_jump_world run forceload add ~ ~
-# forceload the reset region (far outside origin)
-execute in pd_dimensions:bunny_jump_world positioned 12300000 40 12300000 run forceload add ~ ~ ~19 ~19
+# setup forceload for the dimension
+execute in pd_dimensions:bunny_jump_world run function pd_dimensions:general_setup/setup_forceload_here
 
 
 ### canyon ###
 # set the dimension number
 scoreboard players set %canyon_world pd_dimensions 4
-# forceload origin
-execute in pd_dimensions:canyon_world run forceload add ~ ~
-# forceload the reset region (far outside origin)
-execute in pd_dimensions:canyon_world positioned 12300000 40 12300000 run forceload add ~ ~ ~19 ~19
+# setup forceload for the dimension
+execute in pd_dimensions:canyon_world run function pd_dimensions:general_setup/setup_forceload_here
 
 
 ### cave ###
 # set the dimension number
 scoreboard players set %cave_world pd_dimensions -2
-# forceload origin
-execute in pd_dimensions:cave_world run forceload add ~ ~
-# forceload the reset region (far outside origin)
-execute in pd_dimensions:cave_world positioned 12300000 40 12300000 run forceload add ~ ~ ~19 ~19
+# setup forceload for the dimension
+execute in pd_dimensions:cave_world run function pd_dimensions:general_setup/setup_forceload_here
 
 
 ### desert ###
 # set the dimension number
 scoreboard players set %desert_world pd_dimensions 3
-# forceload origin
-execute in pd_dimensions:desert_world run forceload add ~ ~
-# forceload the reset region (far outside origin)
-execute in pd_dimensions:desert_world positioned 12300000 40 12300000 run forceload add ~ ~ ~19 ~19
+# setup forceload for the dimension
+execute in pd_dimensions:desert_world run function pd_dimensions:general_setup/setup_forceload_here
 
 
 ### sewer ###
 # set the dimension number
 scoreboard players set %sewer_world pd_dimensions -3
-# forceload origin
-execute in pd_dimensions:sewer_world run forceload add ~ ~
-# forceload the reset region (far outside origin)
-execute in pd_dimensions:sewer_world positioned 12300000 40 12300000 run forceload add ~ ~ ~19 ~19
+# setup forceload for the dimension
+execute in pd_dimensions:sewer_world run function pd_dimensions:general_setup/setup_forceload_here
 
 
 ### skyblock ###
 # set the dimension number
 scoreboard players set %skyblock_world pd_dimensions 2
-# forceload origin
-execute in pd_dimensions:skyblock_world run forceload add ~ ~
-# forceload the reset region (far outside origin)
-execute in pd_dimensions:skyblock_world positioned 12300000 40 12300000 run forceload add ~ ~ ~19 ~19
+# setup forceload for the dimension
+execute in pd_dimensions:skyblock_world run function pd_dimensions:general_setup/setup_forceload_here
