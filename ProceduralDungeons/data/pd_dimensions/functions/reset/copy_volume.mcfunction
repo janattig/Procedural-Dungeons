@@ -13,5 +13,4 @@ execute positioned ~-9 0 ~-9 run execute as @e[type=!player, dx=19, dz=19, dy=10
 execute positioned ~-9 0 ~-9 run execute as @e[type=!player, dx=19, dz=19, dy=-10000] at @s run kill @s
 
 # if not within the list of currently supported region sizes
-execute unless score %current_reset_region_size pd_dimensions matches 10..19 run say not possible
 execute unless score %current_reset_region_size pd_dimensions matches 10..19 run tellraw @a ["",{"text":"> "},{"text":"PD DIM ERROR:","color":"red"},{"text":" unable to reset "},{"score":{"name":"%current_reset_region_size","objective":"pd_dimensions"},"color":"red"},{"text":"x"},{"score":{"name":"%current_reset_region_size","objective":"pd_dimensions"},"color":"red"},{"text":" region"}]
