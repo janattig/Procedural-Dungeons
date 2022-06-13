@@ -14,9 +14,14 @@ Dimension sub-repo of the Procedural Dungeons pack. Provides the different dimen
 
 3. **Dimension checks (scoreboard)**. Since every dimension comes with its own scoreboard numbering (e.g. `%cave_world` in `pd_dimensions` for the dimension `cave_world`), there is a function `pd_dimensions:set_current_dimension_scoreboard` to save the current dimension number of the function call to the scoreboard player `%current_dimension` in `pd_dimensions`.
 
-4. **Teleport entity to dimension (based on scoreboard)**. The function `pd_dimensions:tp_self_to_target_dimension` teleports the function caller (entity) to the dimension which is specified by its number in `%target_tp_dimension` in `pd_dimensions`.
+4. **Teleport entity to dimension (based on scoreboard)**. The function [`pd_dimensions:tp_self_to_target_dimension`](functions/tp_self_to_target_dimension.mcfunction) teleports the function caller (entity) to the dimension which is specified by its number in `%target_tp_dimension` in `pd_dimensions`.
 
 5. **Dimension resets** to reset the landscape / terrain in a dimension back to what it was before editing. Resets have to be undertaken in the following steps:
     1. Specify the x/z size of the target area by setting the scoreboard value `%reset_region_size` in `pd_dimensions`. The y size is maxed out to reach the 32000 block maximum volume to change during one tick.
     2. Register the regions which have to be reset. The caller position marks the center of the cube's bottom which is reset, i.e. with a x/z size of 11, everything from `~-5 ~ ~-5` to `~5 ~100 ~5` is being reset
     3. reset either the dimension in which you are (or the function call takes place) with the function `pd_dimensions:reset_this_dimension` or choose a dimension with a suitable scoreboard number at `%reset_dimension` in `pd_dimensions` and reset it with the function `pd_dimensions:reset_chosen_dimension`
+
+
+
+
+In case you want to extend this package and add your own dimension, you have to modify the following:
