@@ -2,7 +2,7 @@
 
 Dimension sub-repo of the Procedural Dungeons pack. Provides the different dimensions in which areas are created. In total, the following parts are provided:
 
-1. **Dimension definition** by actual custom dimensions. The already implemented dimensions are
+1. **Dimension definition** by actual custom dimensions. Specifications are included in the [dimensions](dimensions/) folder. The already implemented dimensions are
     - `bunny_jump_world` made from cobblestone and slime blocks with slimes spawning
     - `canyon_world` layered dimension with terracotta and red sand on top
     - `cave_world` huge pile of dirt with sky above
@@ -18,10 +18,21 @@ Dimension sub-repo of the Procedural Dungeons pack. Provides the different dimen
 
 5. **Dimension resets** to reset the landscape / terrain in a dimension back to what it was before editing. Resets have to be undertaken in the following steps:
     1. Specify the x/z size of the target area by setting the scoreboard value `%reset_region_size` in `pd_dimensions`. The y size is maxed out to reach the 32000 block maximum volume to change during one tick.
-    2. Register the regions which have to be reset. The caller position marks the center of the cube's bottom which is reset, i.e. with a x/z size of 11, everything from `~-5 ~ ~-5` to `~5 ~100 ~5` is being reset
+    2. Register the regions which have to be reset with the function `pd_dimensions:register_region_for_reset` (found [here](functions/register_region_for_reset.mcfunction)). The caller position marks the center of the cube's bottom which is reset, i.e. with a x/z size of 11, everything from `~-5 ~ ~-5` to `~5 ~100 ~5` is being reset
     3. reset either the dimension in which you are (or the function call takes place) with the function `pd_dimensions:reset_this_dimension` (found [here](functions/reset_this_dimension.mcfunction)) or choose a dimension with a suitable scoreboard number at `%reset_dimension` in `pd_dimensions` and reset it with the function `pd_dimensions:reset_chosen_dimension` (found [here](functions/reset_chosen_dimension.mcfunction)).
 
 
 
+### Adding new dimensions
 
 In case you want to extend this package and add your own dimension, you have to modify the following:
+
+1. Provide a new dimension file in the [dimensions](dimensions/) folder, following the [specifications](https://minecraft.fandom.com/wiki/Custom_dimension) for custom dimensions in Minecraft. Naming convention currently is `YOUR_NAME_world`.
+
+2. Provide a new predicate in the [predicates](predicates/) folder which checks if a function call is inside your custom dimension. Naming convention currently is `is_in_YOUR_NAME_world`.
+
+3. Initialize the dimension at the end of the [`install`](functions/general_setup/install.mcfunction) file similar to how all other dimensions are initialized. You have to provide a custom number as well as setup the forceloading.
+
+4. Extend dimension checks via scoreboards in the function `pd_dimensions:set_current_dimension_scoreboard`, which can be found [here](functions/set_current_dimension_scoreboard.mcfunction), by adding a new line at the bottom.
+
+5. Extend teleporting to custom dimensions by scoreboards in the function `pd_dimensions:tp_self_to_target_dimension`, which can be found [here](functions/tp_self_to_target_dimension.mcfunction), by adding a new line at the bottom.
