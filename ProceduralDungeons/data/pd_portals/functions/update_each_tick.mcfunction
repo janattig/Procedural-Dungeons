@@ -11,3 +11,4 @@ execute as @e[tag=pd_portal_decoration] at @s run function pd_portals:portal_int
 
 
 # make a single teleport per tick
+execute as @e[tag=pd_portal, tag=pd_portal_can_teleport, limit=1] at @s run function pd_portals:portal_internal/perform_teleport
