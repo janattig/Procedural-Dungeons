@@ -1,4 +1,7 @@
 
 {
-	"values": ["procedural_dungeons:main_tick"]
+	"values": [
+		"pd_portals:update_each_tick",
+		"procedural_dungeons:main_tick"
+	]
 }
