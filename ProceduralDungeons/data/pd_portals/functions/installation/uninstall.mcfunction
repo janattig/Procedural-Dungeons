@@ -1,0 +1,6 @@
+# remove the scoreboards
+scoreboard objectives remove pd_portal_target_x
+scoreboard objectives remove pd_portal_target_y
+scoreboard objectives remove pd_portal_target_z
+scoreboard objectives remove pd_portal_target_dim
+scoreboard objectives remove pd_portal_coordinates
