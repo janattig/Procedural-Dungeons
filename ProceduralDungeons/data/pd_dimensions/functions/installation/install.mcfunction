@@ -42,39 +42,39 @@ execute in minecraft:overworld run forceload add ~ ~
 # set the dimension number
 scoreboard players set %bunny_jump_world pd_dimensions 5
 # setup forceload for the dimension
-execute in pd_dimensions:bunny_jump_world run function pd_dimensions:general_setup/setup_forceload_here
+execute in pd_dimensions:bunny_jump_world run function pd_dimensions:installation/setup_forceload_here
 
 
 ### canyon ###
 # set the dimension number
 scoreboard players set %canyon_world pd_dimensions 4
 # setup forceload for the dimension
-execute in pd_dimensions:canyon_world run function pd_dimensions:general_setup/setup_forceload_here
+execute in pd_dimensions:canyon_world run function pd_dimensions:installation/setup_forceload_here
 
 
 ### cave ###
 # set the dimension number
 scoreboard players set %cave_world pd_dimensions -2
 # setup forceload for the dimension
-execute in pd_dimensions:cave_world run function pd_dimensions:general_setup/setup_forceload_here
+execute in pd_dimensions:cave_world run function pd_dimensions:installation/setup_forceload_here
 
 
 ### desert ###
 # set the dimension number
 scoreboard players set %desert_world pd_dimensions 3
 # setup forceload for the dimension
-execute in pd_dimensions:desert_world run function pd_dimensions:general_setup/setup_forceload_here
+execute in pd_dimensions:desert_world run function pd_dimensions:installation/setup_forceload_here
 
 
 ### sewer ###
 # set the dimension number
 scoreboard players set %sewer_world pd_dimensions -3
 # setup forceload for the dimension
-execute in pd_dimensions:sewer_world run function pd_dimensions:general_setup/setup_forceload_here
+execute in pd_dimensions:sewer_world run function pd_dimensions:installation/setup_forceload_here
 
 
 ### skyblock ###
 # set the dimension number
 scoreboard players set %skyblock_world pd_dimensions 2
 # setup forceload for the dimension
-execute in pd_dimensions:skyblock_world run function pd_dimensions:general_setup/setup_forceload_here
+execute in pd_dimensions:skyblock_world run function pd_dimensions:installation/setup_forceload_here
