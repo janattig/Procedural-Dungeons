@@ -16,4 +16,8 @@ The entirety of Procedural Dungeons is split up into several (mostly independent
 
 2. [`pd_portals`](ProceduralDungeons/data/pd_portals) contains all content regarding custom portals between dimensions, i.e. opening and closing portals as well as the teleporting of players.
 
-3. [`procedural_dungeons`](ProceduralDungeons/data/procedural_dungeons) is the overarching namespace unifying every other subpackage.
+3. [`pd_generation`](ProceduralDungeons/data/pd_generation) contains all terrain generation related content
+
+4. [`pd_maps`](ProceduralDungeons/data/pd_maps) contains map items and a custom map device (structure) which is able to open portals to freshly generated custom dungeons, parametrized by the map items.
+
+5. [`procedural_dungeons`](ProceduralDungeons/data/procedural_dungeons) is the overarching namespace unifying every other subpackage.
