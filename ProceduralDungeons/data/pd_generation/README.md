@@ -18,10 +18,10 @@ Further, optional arguments can be specified. These will be set to default value
 - `priority` (default value `-1`) used for when choosing equivalent between rooms. Rooms with higher priority are always chosen first
 
 A minimal working example would therefore be
-```
+```mcfunction
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"bunny_jump", size:14, north:1, file:"procedural_dungeons:rooms/bunny_jump/test_north"}
 ```
 and a more extensive example could read
-```
+```mcfunction
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"bunny_jump", size:14, north:1, south:0, east:0, west:0, priority:-1, file:"procedural_dungeons:rooms/bunny_jump/test_north"}
 ```
