@@ -15,8 +15,10 @@ execute unless data storage procedural_dungeons:level_data current_room.west run
 execute unless data storage procedural_dungeons:level_data current_room.priority run data modify storage procedural_dungeons:level_data current_room merge value {priority:-1}
 
 # append the room to the all_rooms list
-data modify storage procedural_dungeons:level_data all_rooms append from storage procedural_dungeons:level_data current_room
-# remove the current room
+execute if data storage procedural_dungeons:level_data current_room.file if data storage procedural_dungeons:level_data current_room.map if data storage procedural_dungeons:level_data current_room.size run data modify storage procedural_dungeons:level_data all_rooms append from storage procedural_dungeons:level_data current_room
+execute unless data storage procedural_dungeons:level_data current_room.file run tellraw @a ["",{"text":"> "},{"text":"PD ROOM ERROR:","color":"red"},{"text":" unable to process room "},{"text":"(missing file)","color":"red"}]
+execute unless data storage procedural_dungeons:level_data current_room.map run tellraw @a ["",{"text":"> "},{"text":"PD ROOM ERROR:","color":"red"},{"text":" unable to process room "},{"text":"(missing map)","color":"red"}]
+execute unless data storage procedural_dungeons:level_data current_room.size run tellraw @a ["",{"text":"> "},{"text":"PD ROOM ERROR:","color":"red"},{"text":" unable to process room "},{"text":"(missing size)","color":"red"}]
 data remove storage procedural_dungeons:level_data current_room
 
 # call the finalize function recursively again
