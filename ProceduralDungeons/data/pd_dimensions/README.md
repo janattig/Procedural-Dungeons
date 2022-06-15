@@ -77,7 +77,7 @@ In case you want to extend this package and add your own dimension, you have to 
 
 2. Provide a new *predicate* in the [predicates](predicates/) folder which checks if a function call is inside your custom dimension. Naming convention currently is `is_in_your_name_world`.
 
-3. *Initialize* your dimension with a code block in the [`pd_dimensions:install`](functions/installation/install.mcfunction) function similar to other dimensions. In total, you have to provide a custom number for your dimension and call the forceloading setup in it.
+3. *Initialize* your dimension with a code block in the [`pd_dimensions:installation/install`](functions/installation/install.mcfunction) function similar to other dimensions. In total, you have to provide a custom number for your dimension and call the forceloading setup in it.
 
 4. Extend *dimension checks via scoreboards* by adding a new line to the function [`pd_dimensions:set_current_dimension_scoreboard`](functions/set_current_dimension_scoreboard.mcfunction).
 
