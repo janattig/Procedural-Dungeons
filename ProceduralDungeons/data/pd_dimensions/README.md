@@ -10,6 +10,11 @@ Dimension sub-repo of the Procedural Dungeons pack. Provides the different dimen
     - `sewer_world` similar to cave but at night time
     - `skyblock_world` complete void up in the sky (no blocks at all)
 
+    With this definition, you can already enter the custom dimensions by using
+    ```mcfunction
+    execute in pd_dimensions:cave_world run tp @s 0 100 0
+    ```
+
 2. **Dimension checks (predicates)**. Any dimension has an according predicate (like `pd_dimensions:is_in_cave_world` for `cave_world`) which can be used to test if the function call is inside the dimension. Predicates are specified in [this](predicates/) folder.
 
 3. **Dimension checks (scoreboard)**. Since every dimension comes with its own scoreboard numbering (e.g. `%cave_world` in `pd_dimensions` for the dimension `cave_world`), there is a function `pd_dimensions:set_current_dimension_scoreboard` (found [here](functions/set_current_dimension_scoreboard.mcfunction)) to save the current dimension number of the function call to the scoreboard player `%current_dimension` in `pd_dimensions`.
