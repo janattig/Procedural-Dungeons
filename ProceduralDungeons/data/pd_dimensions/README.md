@@ -17,9 +17,35 @@ Dimension sub-repo of the Procedural Dungeons pack. Provides the different dimen
 
 2. **Dimension checks (predicates)**. Any dimension has an according predicate (like `pd_dimensions:is_in_cave_world` for `cave_world`) which can be used to test if the function call is inside the dimension. Predicates are specified in [this](predicates/) folder.
 
+    With such predicates, you can execute code only if the call happens in a certain dimension:
+    ```mcfunction
+    execute if predicate pd_dimensions:is_in_cave_world run ...
+    ```
+
 3. **Dimension checks (scoreboard)**. Since every dimension comes with its own scoreboard numbering (e.g. `%cave_world` in `pd_dimensions` for the dimension `cave_world`), there is a function `pd_dimensions:set_current_dimension_scoreboard` (found [here](functions/set_current_dimension_scoreboard.mcfunction)) to save the current dimension number of the function call to the scoreboard player `%current_dimension` in `pd_dimensions`.
 
+    With these dimension checks, you can determine the current dimension by first calling
+    ```mcfunction
+    function pd_dimensions:set_current_dimension_scoreboard
+    ```
+    and then using the value from the scoreboard for further things
+    ```mcfunction
+    scoreboard players get %current_dimension pd_dimensions
+    ```
+
 4. **Teleport entity to dimension (based on scoreboard)**. The function `pd_dimensions:tp_self_to_target_dimension` (found [here](functions/tp_self_to_target_dimension.mcfunction)) teleports the function caller (entity) to the dimension which is specified by its number in `%target_tp_dimension` in `pd_dimensions`.
+
+    In practice, you first set the target dimension by one of the following lines
+    ```mcfunction
+    scoreboard players set %target_tp_dimension pd_dimensions 4
+    scoreboard players operation %target_tp_dimension pd_dimensions = %cave_world pd_dimensions
+    ```
+    and then use the function to teleport yourself (or another entity) to this dimension
+    ```mcfunction
+    function pd_dimensions:tp_self_to_target_dimension
+    execute as @e[...] at @s run function pd_dimensions:tp_self_to_target_dimension
+    ```
+    Of course, this comes in handy once it is used for other entities and the dimension scoreboard is set automatically somewhere in your scripts.
 
 5. **Dimension resets** to reset the landscape / terrain in a dimension back to what it was before editing. Resets have to be undertaken in the following steps:
     1. Specify the x/z size of the target area by setting the scoreboard value `%reset_region_size` in `pd_dimensions`. The y size is maxed out to reach the 32000 block maximum volume to change during one tick.
