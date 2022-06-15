@@ -50,22 +50,22 @@ Dimension sub-repo of the Procedural Dungeons pack. Provides the different dimen
 5. **Dimension resets** to reset the landscape / terrain in a dimension back to what it was before editing. Resets have to be undertaken in the following steps:
 
     1. Specify the x/z size of the target area by setting the scoreboard value `%reset_region_size` in `pd_dimensions`. The y size is maxed out to reach the 32000 block maximum volume to change during one tick. Example:
-    ```mcfunction
-    scoreboard players set %reset_region_size pd_dimensions 11
-    ```
+        ```mcfunction
+        scoreboard players set %reset_region_size pd_dimensions 11
+        ```
     2. Register the regions which have to be reset with the function `pd_dimensions:register_region_for_reset` (found [here](functions/register_region_for_reset.mcfunction)). The caller position marks the center of the cube's bottom which is reset, i.e. with a x/z size of 11, everything from `~-5 ~ ~-5` to `~5 ~100 ~5` is being reset. Example:
-    ```mcfunction
-    function pd_dimensions:register_region_for_reset
-    ```
+        ```mcfunction
+        function pd_dimensions:register_region_for_reset
+        ```
     3. reset either the dimension in which you are (or the function call takes place) with the function `pd_dimensions:reset_this_dimension` (found [here](functions/reset_this_dimension.mcfunction)) or choose a dimension with a suitable scoreboard number at `%reset_dimension` in `pd_dimensions` and reset it with the function `pd_dimensions:reset_chosen_dimension` (found [here](functions/reset_chosen_dimension.mcfunction)). Example:
-    ```mcfunction
-    function pd_dimensions:reset_this_dimension
-    ```
-    or
-    ```mcfunction
-    scoreboard players operation %reset_dimension pd_dimensions = %cave_world pd_dimensions
-    function pd_dimensions:reset_chosen_dimension
-    ```
+        ```mcfunction
+        function pd_dimensions:reset_this_dimension
+        ```
+        or
+        ```mcfunction
+        scoreboard players operation %reset_dimension pd_dimensions = %cave_world pd_dimensions
+        function pd_dimensions:reset_chosen_dimension
+        ```
 
 
 
