@@ -19,9 +19,9 @@ scoreboard players set %is_reset_in_progress pd_dimensions 0
 
 
 # designate memory for where regions are that have to be reset (only if not designated already)
-execute unless data storage pd_dimensions:regions to_be_reset run data modify storage pd_dimensions:regions to_be_reset set value []
-data modify storage pd_dimensions:regions resetting set value []
-data modify storage pd_dimensions:regions to_be_reset_backup set value []
+execute unless data storage procedural_dungeons:reset_regions to_be_reset run data modify storage procedural_dungeons:reset_regions to_be_reset set value []
+data modify storage procedural_dungeons:reset_regions resetting set value []
+data modify storage procedural_dungeons:reset_regions to_be_reset_backup set value []
 
 
 
