@@ -77,11 +77,11 @@ In case you want to extend this package and add your own dimension, you have to 
 
 2. Provide a new *predicate* in the [predicates](predicates/) folder which checks if a function call is inside your custom dimension. Naming convention currently is `is_in_your_name_world`.
 
-3. *Initialize* the dimension at the end of the [`install`](functions/installation/install.mcfunction) file similar to how all other dimensions are initialized. You have to provide a custom number as well as setup the forceloading.
+3. *Initialize* with a code block in the [`install`](functions/installation/install.mcfunction) file similar other dimensions. In total, you have to provide a custom number for your dimension and call the forceloading setup in it.
 
-4. Extend *dimension checks via scoreboards* in the function `pd_dimensions:set_current_dimension_scoreboard`, which can be found [here](functions/set_current_dimension_scoreboard.mcfunction), by adding a new line at the bottom.
+4. Extend *dimension checks via scoreboards* by adding a new line to the function `pd_dimensions:set_current_dimension_scoreboard` which can be found [here](functions/set_current_dimension_scoreboard.mcfunction).
 
-5. Extend *teleporting* to custom dimensions by scoreboards in the function `pd_dimensions:tp_self_to_target_dimension`, which can be found [here](functions/tp_self_to_target_dimension.mcfunction), by adding a new line at the bottom.
+5. Extend *teleporting to custom dimensions via scoreboards* by adding a new line to the function `pd_dimensions:tp_self_to_target_dimension` which can be found [here](functions/tp_self_to_target_dimension.mcfunction).
 
 
-The entirety of the *region reset* logic is already generalized to all dimensions and does not need adjustment if you add a new dimension. This is achieved by relying on the functions `pd_dimensions:set_current_dimension_scoreboard` and `pd_dimensions:tp_self_to_target_dimension` to determine and locate to all dimensions.
+This is it! The entirety of the *region reset* logic is already generalized to all dimensions and does not need adjustment if you add a new dimension. This is achieved by relying on the functions `pd_dimensions:set_current_dimension_scoreboard` and `pd_dimensions:tp_self_to_target_dimension` to determine and locate to all dimensions.
