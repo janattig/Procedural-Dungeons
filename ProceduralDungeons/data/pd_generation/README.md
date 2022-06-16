@@ -37,9 +37,9 @@ Level generation runs in the following phases, all designated for a specific tas
 
 
 
-### Room data
+### Room data / Adding new rooms
 
-When adding new rooms, one has to append an entry to the `procedural_dungeons:level_data all_rooms` data storage in the global [`init`](functions\leveldata\init.mcfunction) function or the equivalent functions of the individual already impelemented levels. This new entry **must** have the fields
+When adding new rooms, one has to append an entry to the `procedural_dungeons:level_data all_rooms` data storage in the global [`init`](functions/leveldata/init.mcfunction) function or the equivalent functions of the individual already impelemented levels. This new entry **must** have the fields
 - `file` specifies the structure file of the room. Typically has a namespace and a file location, e.g. `"procedural_dungeons:rooms/bunny_jump/block_test"`
 - `size` specifies the dimension of the room in x and z directions. Must be specified as an integer
 - `map` gives a string which can be used to identify the level that the room belongs to later on
