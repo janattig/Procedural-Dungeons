@@ -1,7 +1,6 @@
 # LOADING the level to actually generate it
 
 # room set (has to be specified)
-# /data modify storage procedural_dungeons:current_level all_rooms set value []
 data modify storage procedural_dungeons:current_level all_rooms append from storage procedural_dungeons:level_data all_rooms[{map:"bunny_jump", size:14}]
 
 # OPTIONAL: dimension number (only optional if it can be deduced from "map" data of rooms)

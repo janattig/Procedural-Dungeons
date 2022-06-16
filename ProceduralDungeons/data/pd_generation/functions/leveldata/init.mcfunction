@@ -1,3 +1,6 @@
+# function to init the list of all rooms across all levels
+# called once upon installation / reload
+
 # clear the current data
 data modify storage procedural_dungeons:level_data all_rooms set value []
 
