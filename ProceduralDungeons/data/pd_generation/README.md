@@ -20,12 +20,18 @@ and then runs through the following phases, each designated for a specific task.
     scoreboard player set %level_to_generate pd_generation 5
     ```
 
-    The level parameters include linear extents of the grid of rooms along the cardinal directions, thus setting the boundaries of the level generation.
+    The level parameters include linear extents of the grid of rooms along the cardinal directions, thus setting the boundaries of the level generation
     ```mcfunction
     scoreboard players set %min_grid_x pd_level_parameters -3
     scoreboard players set %min_grid_z pd_level_parameters -2
     scoreboard players set %max_grid_x pd_level_parameters 2
     scoreboard players set %max_grid_z pd_level_parameters 3
+    ```
+    as well as the starting point of the grid scaled by a factor of 100 (to allow for accurate starting positions)
+    ```mcfunction
+    scoreboard players set %start_x pd_level_parameters 0
+    scoreboard players set %start_y pd_level_parameters 500
+    scoreboard players set %start_z pd_level_parameters 0
     ```
 
 1. **Load level specifications**
