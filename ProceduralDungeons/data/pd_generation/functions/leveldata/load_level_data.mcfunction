@@ -28,6 +28,6 @@ execute unless data storage procedural_dungeons:current_level size run data modi
 
 
 # give error messages if there is no dimension or size or rooms
-execute unless data storage procedural_dungeons:current_level all_rooms[0] run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" unable to generate level "},{"text":"(missing rooms)","color":"red"}]
-execute unless data storage procedural_dungeons:current_level dimension run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" unable to generate level "},{"text":"(missing dimension)","color":"red"}]
-execute unless data storage procedural_dungeons:current_level size run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" unable to generate level "},{"text":"(missing size)","color":"red"}]
+execute unless data storage procedural_dungeons:current_level all_rooms[0] run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing data "},{"text":"(rooms)","color":"red"}]
+execute unless data storage procedural_dungeons:current_level dimension run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing data "},{"text":"(dimension)","color":"red"}]
+execute unless data storage procedural_dungeons:current_level size run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing data "},{"text":"(size)","color":"red"}]
