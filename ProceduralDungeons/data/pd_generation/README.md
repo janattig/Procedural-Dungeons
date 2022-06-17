@@ -9,30 +9,32 @@ Level generation is started from calling a single function
 ```mcfunction
 function pd_generation:generate_level
 ```
-and then runs through the following phases, each designated for a specific task.
+and then runs through several phases, each designated for a specific task.
 
-0. **What has to be done before**
+Before a level can be generated, the level parameters have to be specified by setting certain scoreboard values of the `pd_generation` scoreboard. These include both the level specification (*which* level should be generated?) as well as actual level parameters like linear extent along the x and z coordinates. Note that when opening a map in the map device (provided in the [`pd_maps`](../pd_maps) subpackage), these settings are specified by the map and are set automatically.
 
-    Before a level can be generated, the level parameters have to be specified by setting certain scoreboard values of the `pd_generation` scoreboard. These include both the level specification (*which* level should be generated?) as well as actual level parameters like linear extent along the x and z coordinates. Note that when opening a map in the map device (provided in the [`pd_maps`](../pd_maps) subpackage), these settings are specified by the map and are set automatically.
+The level specification is indicated by setting `%level_to_generate` to an integer value which specifies the tileset and dimension of the level.
+```mcfunction
+scoreboard player set %level_to_generate pd_generation 5
+```
 
-    The level specification is indicated by setting `%level_to_generate` to an integer value which specifies the tileset and dimension of the level.
-    ```mcfunction
-    scoreboard player set %level_to_generate pd_generation 5
-    ```
+The level parameters include linear extents of the grid of rooms along the cardinal directions, thus setting the boundaries of the level generation
+```mcfunction
+scoreboard players set %min_grid_x pd_level_parameters -3
+scoreboard players set %min_grid_z pd_level_parameters -2
+scoreboard players set %max_grid_x pd_level_parameters 2
+scoreboard players set %max_grid_z pd_level_parameters 3
+```
+as well as the starting point of the grid scaled by a factor of 100 (to allow for accurate starting positions)
+```mcfunction
+scoreboard players set %start_x pd_level_parameters 0
+scoreboard players set %start_y pd_level_parameters 500
+scoreboard players set %start_z pd_level_parameters 0
+```
 
-    The level parameters include linear extents of the grid of rooms along the cardinal directions, thus setting the boundaries of the level generation
-    ```mcfunction
-    scoreboard players set %min_grid_x pd_level_parameters -3
-    scoreboard players set %min_grid_z pd_level_parameters -2
-    scoreboard players set %max_grid_x pd_level_parameters 2
-    scoreboard players set %max_grid_z pd_level_parameters 3
-    ```
-    as well as the starting point of the grid scaled by a factor of 100 (to allow for accurate starting positions)
-    ```mcfunction
-    scoreboard players set %start_x pd_level_parameters 0
-    scoreboard players set %start_y pd_level_parameters 500
-    scoreboard players set %start_z pd_level_parameters 0
-    ```
+
+
+The generation phases are:
 
 1. **Load level specifications**
 
