@@ -7,3 +7,6 @@ function pd_generation:leveldata/load_level_data
 
 # finalize scoreboards based on level data
 function pd_generation:leveldata/update_scoreboard_values
+
+# generate variations of current rooms
+function pd_generation:leveldata/generate_room_variations

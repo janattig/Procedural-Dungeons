@@ -40,10 +40,21 @@ scoreboard players reset %start_y pd_level_parameters
 
 # information of final rooms
 # each room marker save its border types in these scoreboards
+scoreboard objectives add pd_room_parameters dummy
 scoreboard objectives add pd_room_border_n dummy
 scoreboard objectives add pd_room_border_s dummy
 scoreboard objectives add pd_room_border_e dummy
 scoreboard objectives add pd_room_border_w dummy
+
+
+
+
+# math
+scoreboard objectives add pd_math dummy
+scoreboard players set 2 pd_math 2
+scoreboard players set -2 pd_math -2
+scoreboard players set -1 pd_math -1
+
 
 
 
