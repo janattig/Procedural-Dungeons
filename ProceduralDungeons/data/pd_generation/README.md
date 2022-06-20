@@ -3,7 +3,7 @@
 Sub-repo of the Procedural Dungeons pack providing the actual terrain generation content. Terrain generation in this datapack works general in two steps. First, a grid of *room markers* is placed and equipped with connectivity. Second, the markers are used to spawn individual Minecraft structures which resemble the actual pieces of the level.
 
 
-### Generation phases
+### Preparing level generation
 
 Level generation is started from calling a single function
 ```mcfunction
@@ -32,6 +32,9 @@ scoreboard players set %start_y pd_level_parameters 50
 starting values for x and z coordinates are `0`.
 
 
+
+
+### Generation phases
 
 The generation phases are:
 
