@@ -1,9 +1,7 @@
 # update the scoreboard values describing the level data
 
 # check if the start has been set
-execute unless score %start_x pd_level_parameters matches ..1 unless score %start_x pd_level_parameters matches 1.. run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing scoreboard value "},{"text":"(start x)","color":"red"}]
 execute unless score %start_y pd_level_parameters matches ..1 unless score %start_y pd_level_parameters matches 1.. run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing scoreboard value "},{"text":"(start y)","color":"red"}]
-execute unless score %start_z pd_level_parameters matches ..1 unless score %start_z pd_level_parameters matches 1.. run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing scoreboard value "},{"text":"(start z)","color":"red"}]
 
 # check if the grid has been set
 execute unless score %min_grid_x pd_level_parameters matches -1000..1000 run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing scoreboard value "},{"text":"(min x grid size)","color":"red"}]

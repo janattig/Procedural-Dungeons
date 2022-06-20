@@ -34,9 +34,7 @@ scoreboard players reset %algorithm pd_level_parameters
 scoreboard players set %ALG_1_LABYRINTH pd_level_parameters 1
 scoreboard players set %ALG_2_WAVEFUNCTION_COLLAPSE pd_level_parameters 2
 # algorithm start position
-scoreboard players reset %start_x pd_level_parameters
 scoreboard players reset %start_y pd_level_parameters
-scoreboard players reset %start_z pd_level_parameters
 
 
 

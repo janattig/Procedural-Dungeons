@@ -25,9 +25,7 @@ execute unless score %min_grid_z pd_level_parameters matches -1000..1000 run sco
 execute unless score %max_grid_z pd_level_parameters matches -1000..1000 run scoreboard players set %can_be_generated pd_generation 0
 
 # check if the start is set correctly
-execute unless score %start_x pd_level_parameters matches ..1 unless score %start_x pd_level_parameters matches 1.. run scoreboard players set %can_be_generated pd_generation 0
 execute unless score %start_y pd_level_parameters matches ..1 unless score %start_y pd_level_parameters matches 1.. run scoreboard players set %can_be_generated pd_generation 0
-execute unless score %start_z pd_level_parameters matches ..1 unless score %start_z pd_level_parameters matches 1.. run scoreboard players set %can_be_generated pd_generation 0
 
 # check if the algorithm is set correctly
 execute unless score %algorithm pd_level_parameters = %ALG_1_LABYRINTH pd_level_parameters unless score %algorithm pd_level_parameters = %ALG_2_WAVEFUNCTION_COLLAPSE pd_level_parameters run scoreboard players set %can_be_generated pd_generation 0
