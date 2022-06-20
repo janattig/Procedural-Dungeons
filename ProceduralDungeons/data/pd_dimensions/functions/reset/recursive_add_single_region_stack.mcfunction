@@ -8,6 +8,7 @@ execute store result score %tmp_var pd_dimensions run data get storage procedura
 
 # if the dimension is the chosen dimension for resetting, put it into the resetting list
 execute if score %tmp_var pd_dimensions = %reset_dimension pd_dimensions run data modify storage procedural_dungeons:reset_regions resetting append from storage procedural_dungeons:reset_regions to_be_reset[0]
+execute if score %tmp_var pd_dimensions = %reset_dimension pd_dimensions run scoreboard players add %number_of_regions_to_reset pd_dimensions 1
 # if the dimension is the chosen dimension for resetting, put it into the backup list
 execute unless score %tmp_var pd_dimensions = %reset_dimension pd_dimensions run data modify storage procedural_dungeons:reset_regions to_be_reset_backup append from storage procedural_dungeons:reset_regions to_be_reset[0]
 

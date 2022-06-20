@@ -5,4 +5,4 @@ function pd_dimensions:reset/prepare_stack_chosen_dimension
 scoreboard players set %is_reset_in_progress pd_dimensions 1
 
 # reset all regions in the stack
-function pd_dimensions:reset/reset_regions_in_stack_recursively
+schedule function pd_dimensions:reset/reset_regions_in_stack_recursively 1t
