@@ -25,12 +25,11 @@ scoreboard players set %min_grid_z pd_level_parameters -2
 scoreboard players set %max_grid_x pd_level_parameters 2
 scoreboard players set %max_grid_z pd_level_parameters 3
 ```
-as well as the starting point of the grid scaled by a factor of 100 (to allow for accurate starting positions)
+as well as the starting height of the grid
 ```mcfunction
-scoreboard players set %start_x pd_level_parameters 0
-scoreboard players set %start_y pd_level_parameters 500
-scoreboard players set %start_z pd_level_parameters 0
+scoreboard players set %start_y pd_level_parameters 50
 ```
+starting values for x and z coordinates are `0`.
 
 
 
