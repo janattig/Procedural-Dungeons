@@ -7,5 +7,4 @@ execute if score %can_be_generated pd_generation matches 0 run schedule function
 execute if score %can_be_generated pd_generation matches 1 run schedule function pd_generation:phases/3_build_room_layout 1t
 
 # debugging output
-execute if score %can_be_generated pd_generation matches 0 run tellraw @a [{"text":"  > wait ... ", "color":"gray"}]
 execute if score %can_be_generated pd_generation matches 1 run tellraw @a [{"text":"  > DONE", "color":"gray"}]
