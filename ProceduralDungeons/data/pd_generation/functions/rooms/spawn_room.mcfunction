@@ -12,6 +12,7 @@ data modify block ~ ~ ~ posY set value 0
 data modify block ~ ~ ~ posZ set from entity @s data.posZ
 data modify block ~ ~ ~ rotation set from entity @s data.rotation
 data modify block ~ ~ ~ name set from entity @s data.file
+data modify block ~ ~ ~ ignoreEntities set value 0b
 
 # add redstone block on top for spawning
 setblock ~ ~1 ~ minecraft:redstone_block
