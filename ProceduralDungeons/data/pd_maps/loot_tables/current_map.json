@@ -47,11 +47,37 @@
               "lore": [
                 [
                   {
-                    "text": "min x is"
+                    "text": "- map extent is "
                   },
                   {
-                    "nbt": "min_x",
+                    "nbt": "dx",
                     "storage": "procedural_dungeons:current_map"
+                  },
+                  {
+                    "text": "x"
+                  },
+                  {
+                    "nbt": "dz",
+                    "storage": "procedural_dungeons:current_map"
+                  },
+                  {
+                    "text": " rooms"
+                  }
+                ]
+              ],
+              "replace": true
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                [
+                  {
+                    "nbt": "display_name",
+                    "storage": "procedural_dungeons:current_map"
+                  },
+                  {
+                    "text": " Map"
                   }
                 ]
               ],
