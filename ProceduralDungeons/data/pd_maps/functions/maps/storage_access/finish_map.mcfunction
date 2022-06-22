@@ -18,3 +18,11 @@ execute store result storage procedural_dungeons:current_map dz int 1 run scoreb
 scoreboard players reset %tmp1 pd_maps
 scoreboard players reset %tmp2 pd_maps
 scoreboard players reset %tmp_dz pd_maps
+
+
+# generate scoreboard value if the map is a ttt map
+execute store result score %tmp1 pd_maps run data get storage procedural_dungeons:current_map is_ttt
+execute if score %tmp1 pd_maps matches 1 run scoreboard players set %is_ttt_map pd_maps 1
+execute if score %tmp1 pd_maps matches 0 run scoreboard players set %is_ttt_map pd_maps 0
+execute if score %tmp1 pd_maps matches 0 run data modify storage procedural_dungeons:current_map is_ttt set value 0
+scoreboard players reset %tmp1 pd_maps

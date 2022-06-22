@@ -38,6 +38,11 @@
                   "source": "max_z",
                   "target": "max_z",
                   "op": "replace"
+                },
+                {
+                  "source": "is_ttt",
+                  "target": "is_ttt",
+                  "op": "replace"
                 }
               ]
             },
@@ -47,21 +52,82 @@
               "lore": [
                 [
                   {
-                    "text": "- map extent is "
+                    "text": "> map extent is ",
+                    "color": "gray"
                   },
                   {
                     "nbt": "dx",
-                    "storage": "procedural_dungeons:current_map"
+                    "storage": "procedural_dungeons:current_map",
+                    "color": "blue",
+                    "bold": true
                   },
                   {
-                    "text": "x"
+                    "text": "x",
+                    "color": "gray"
                   },
                   {
                     "nbt": "dz",
-                    "storage": "procedural_dungeons:current_map"
+                    "storage": "procedural_dungeons:current_map",
+                    "color": "blue",
+                    "bold": true
                   },
                   {
-                    "text": " rooms"
+                    "text": " rooms",
+                    "color": "gray"
+                  }
+                ]
+              ],
+              "replace": true
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "> ",
+                    "color": "gray"
+                  },
+                  {
+                    "text": "Trouble in MC Town",
+                    "color": "blue",
+                    "bold": true
+                  },
+                  {
+                    "text": " level",
+                    "color": "gray"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "%is_ttt_map"
+                    },
+                    "score": "pd_maps"
+                  },
+                  "range": 1
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                [
+                  {
+                    "nbt": "display_name",
+                    "storage": "procedural_dungeons:current_map",
+                    "bold": true
+                  },
+                  {
+                    "text": " Map",
+                    "bold": false
                   }
                 ]
               ],
@@ -74,12 +140,33 @@
                 [
                   {
                     "nbt": "display_name",
-                    "storage": "procedural_dungeons:current_map"
+                    "storage": "procedural_dungeons:current_map",
+                    "bold": true
                   },
                   {
-                    "text": " Map"
+                    "text": " (TTT)",
+                    "color": "blue",
+                    "bold": true
+                  },
+                  {
+                    "text": " Map",
+                    "bold": false
                   }
                 ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "%is_ttt_map"
+                    },
+                    "score": "pd_maps"
+                  },
+                  "range": 1
+                }
               ],
               "replace": true
             }
