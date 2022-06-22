@@ -1,6 +1,13 @@
 # prepare filename
 function pd_generation:rooms/spawn/determine_spawn_data
 
+# give an error if there is no data (i.e. no variation was found)
+execute unless data entity @s data.file run tellraw @a ["",{"text":"> "},{"text":"PD SPAWN ERROR:","color":"red"},{"text":" unable to find room variation "}]
+execute unless data entity @s data.file run tellraw @a ["",{"text":"  > "},{"text":"(N=","color":"red"},{"score":{"name":"@s","objective":"pd_room_border_n"}, "color":"white"},{"text":", S=","color":"red"},{"score":{"name":"@s","objective":"pd_room_border_s"}, "color":"white"},{"text":", E=","color":"red"},{"score":{"name":"@s","objective":"pd_room_border_e"}, "color":"white"},{"text":", W=","color":"red"},{"score":{"name":"@s","objective":"pd_room_border_w"}, "color":"white"},{"text":")","color":"red"}]
+execute unless data entity @s data.file run execute unless score %currently_ttt pd_room_parameters matches 1 as @s[tag=pd_start] run tellraw @a ["",{"text":"  > "},{"text":"start room (plain)","color":"red"}]
+execute unless data entity @s data.file run execute if score %currently_ttt pd_room_parameters matches 1 as @s[tag=pd_start] run tellraw @a ["",{"text":"  > "},{"text":"start room (TTT)","color":"red"}]
+execute unless data entity @s data.file run execute as @s[tag=!pd_start] run tellraw @a ["",{"text":"  > "},{"text":"regular room","color":"red"}]
+
 # setup the structure block used for spawning
 setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD"} replace
 
