@@ -12,8 +12,5 @@ data modify storage procedural_dungeons:current_map max_x set value 1
 data modify storage procedural_dungeons:current_map max_z set value 2
 
 
-# compile lore text on the map
-function pd_maps:maps/storage_access/compile_map_text
-
 # give the actual map to self
 loot give @s loot pd_maps:current_map

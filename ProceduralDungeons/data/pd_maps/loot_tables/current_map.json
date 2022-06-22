@@ -40,6 +40,22 @@
                   "op": "replace"
                 }
               ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "min x is"
+                  },
+                  {
+                    "nbt": "min_x",
+                    "storage": "procedural_dungeons:current_map"
+                  }
+                ]
+              ],
+              "replace": true
             }
           ]
         }
