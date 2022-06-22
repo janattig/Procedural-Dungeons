@@ -17,8 +17,13 @@ data modify storage procedural_dungeons:level_data all_rooms append value {file:
 data modify storage procedural_dungeons:level_data all_rooms append value {file:"procedural_dungeons:rooms/cave/myroom3", map:"cave", size:11, north:1, priority:5}
 
 
-# call init for the different maps
+# call init for the different levels
 function pd_generation:leveldata/bunny_jump/init
+function pd_generation:leveldata/canyon/init
+function pd_generation:leveldata/cave/init
+function pd_generation:leveldata/desert/init
+function pd_generation:leveldata/sewer/init
+function pd_generation:leveldata/skyblock/init
 
 
 
