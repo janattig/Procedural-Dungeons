@@ -64,9 +64,9 @@ The generation phases are:
 
 
 
-### Room data / Adding new rooms
+### Room data / Adding new rooms to an existing map
 
-When adding new rooms, one has to append an entry to the `procedural_dungeons:level_data all_rooms` data storage in the global [`init`](functions/leveldata/init.mcfunction) function or the equivalent functions of the individual already impelemented levels. This new entry **must** have the fields
+When adding new rooms into the code, one has to append an entry to the `procedural_dungeons:level_data all_rooms` data storage in the global [`init`](functions/leveldata/init.mcfunction) function or the equivalent functions of the individual already impelemented levels (e.g. the [`cave/init`](functions/leveldata/cave/init.mcfunction) function for the cave world level). This new entry **must** have the fields
 - `file` specifies the structure file of the room. Typically has a namespace and a file location, e.g. `"procedural_dungeons:rooms/bunny_jump/block_test"`
 - `size` specifies the dimension of the room in x and z directions. Must be specified as an integer
 - `map` gives a string which can be used to identify the level that the room belongs to later on
@@ -75,11 +75,34 @@ When adding new rooms, one has to append an entry to the `procedural_dungeons:le
 Further, optional arguments can be specified. These will be set to default values if left unspecified:
 - `priority` (default value `-1`) used for when choosing equivalent between rooms. Rooms with higher priority are always chosen first
 
-A minimal working example would therefore be
+A minimal working example for the new line is therefore
 ```mcfunction
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"bunny_jump", size:14, north:1, file:"procedural_dungeons:rooms/bunny_jump/test_north"}
 ```
 and a more extensive example could read
 ```mcfunction
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"bunny_jump", size:14, north:1, south:0, east:0, west:0, priority:-1, file:"procedural_dungeons:rooms/bunny_jump/test_north"}
+```
+
+
+
+
+### Adding an entire new level
+
+To add a new level, i.e. an entire new set of rooms in maybe even a new dimension, you have to do the following:
+
+0. Optional: If you are using a new dimension, make sure to follow the steps of adding the dimension, outlined in the [Adding new dimensions](../pd_dimensions#adding-new-dimensions) section of the `pd_dimensions` package.
+
+1. Create a leveldata folder for your level inside the [`leveldata`](functions/leveldata/) folder, containing two files:
+    - `init.mcfunction` contains all initialization parts of your level, most importantly adding new rooms. Fill this file by adding in your rooms according to the [Adding new rooms](#room-data--adding-new-rooms-to-an-existing-dimension) section outlined above.
+    - `load.mcfunction` contains everything that happens once the level is actually loaded. This file is executed as the first step in level generation. Most importantly, the room set is chosen. Furthermore, the dimension number is set. It is probably best if you have a look at an existing `load` file (e.g. for the `bunny_jump` world, which can be found [here](functions/leveldata/bunny_jump/load.mcfunction)).
+
+2. Link to you `init` file from step 1. by adding a new line to the global [`init`](functions/leveldata/init.mcfunction) function, similar to how other levels are initialized. Your new line should read
+```mcfunction
+function pd_generation:leveldata/your_level_name/init
+```
+
+3. Link to your `load` file from step 1. by adding a new line to the [`load_level_data`](functions/leveldata/load_level_data.mcfunction) function. Here, the scoreboard value `%level_to_generate pd_generation` is used to determine which individual `load` function is called. This means that here, you have to choose a unique identifier (integer) for your level. Your final line should be of the form
+```mcfunction
+execute if score %level_to_generate pd_generation matches YOUR_LEVEL_ID run function pd_generation:leveldata/your_level_name/load
 ```
