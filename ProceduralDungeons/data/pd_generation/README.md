@@ -98,11 +98,11 @@ To add a new level, i.e. an entire new set of rooms in maybe even a new dimensio
     - `load.mcfunction` contains everything that happens once the level is actually loaded. This file is executed as the first step in level generation. Most importantly, the room set is chosen. Furthermore, the dimension number is set. It is probably best if you have a look at an existing `load` file (e.g. for the `bunny_jump` world, which can be found [here](functions/leveldata/bunny_jump/load.mcfunction)).
 
 2. Link to you `init` file from step 1. by adding a new line to the global [`init`](functions/leveldata/init.mcfunction) function, similar to how other levels are initialized. Your new line should read
-```mcfunction
-function pd_generation:leveldata/your_level_name/init
-```
+    ```mcfunction
+    function pd_generation:leveldata/your_level_name/init
+    ```
 
 3. Link to your `load` file from step 1. by adding a new line to the [`load_level_data`](functions/leveldata/load_level_data.mcfunction) function. Here, the scoreboard value `%level_to_generate pd_generation` is used to determine which individual `load` function is called. This means that here, you have to choose a unique identifier (integer) for your level. Your final line should be of the form
-```mcfunction
-execute if score %level_to_generate pd_generation matches YOUR_LEVEL_ID run function pd_generation:leveldata/your_level_name/load
-```
+    ```mcfunction
+    execute if score %level_to_generate pd_generation matches YOUR_LEVEL_ID run function pd_generation:leveldata/your_level_name/load
+    ```
