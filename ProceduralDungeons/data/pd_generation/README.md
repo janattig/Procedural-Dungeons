@@ -94,7 +94,7 @@ To add a new level, i.e. an entire new set of rooms in maybe even a new dimensio
 0. Optional: If you are using a new dimension, make sure to follow the steps of adding the dimension, outlined in the [Adding new dimensions](../pd_dimensions#adding-new-dimensions) section of the `pd_dimensions` package.
 
 1. Create a leveldata folder for your level inside the [`leveldata`](functions/leveldata/) folder, containing two files:
-    - `init.mcfunction` contains all initialization parts of your level, most importantly adding new rooms. Fill this file by adding in your rooms according to the [Adding new rooms](#room-data--adding-new-rooms-to-an-existing-dimension) section outlined above.
+    - `init.mcfunction` contains all initialization parts of your level, most importantly adding new rooms. Fill this file by adding in your rooms according to the [Adding new rooms](#room-data--adding-new-rooms-to-an-existing-map) section outlined above.
     - `load.mcfunction` contains everything that happens once the level is actually loaded. This file is executed as the first step in level generation. Most importantly, the room set is chosen. Furthermore, the dimension number is set. It is probably best if you have a look at an existing `load` file (e.g. for the `bunny_jump` world, which can be found [here](functions/leveldata/bunny_jump/load.mcfunction)).
 
 2. Link to you `init` file from step 1. by adding a new line to the global [`init`](functions/leveldata/init.mcfunction) function, similar to how other levels are initialized. Your new line should read
