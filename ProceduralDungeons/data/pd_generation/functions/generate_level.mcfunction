@@ -5,8 +5,6 @@ tellraw @a ["",{"text":"Generating a new "},{"text":"Procedural Dungeon","color"
 # ONLY FOR DEBUGGING: SPECIFY STUFF
 scoreboard players set %level_to_generate pd_generation 5
 
-scoreboard players set %start_y pd_level_parameters 10
-
 scoreboard players set %min_grid_x pd_level_parameters -1
 scoreboard players set %max_grid_x pd_level_parameters 2
 scoreboard players set %min_grid_z pd_level_parameters -2
