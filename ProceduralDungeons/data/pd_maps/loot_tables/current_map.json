@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "procedural_dungeons:current_map"
+              },
+              "ops": [
+                {
+                  "source": "id",
+                  "target": "id",
+                  "op": "replace"
+                },
+                {
+                  "source": "min_x",
+                  "target": "min_x",
+                  "op": "replace"
+                },
+                {
+                  "source": "max_x",
+                  "target": "max_x",
+                  "op": "replace"
+                },
+                {
+                  "source": "min_z",
+                  "target": "min_z",
+                  "op": "replace"
+                },
+                {
+                  "source": "max_z",
+                  "target": "max_z",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
