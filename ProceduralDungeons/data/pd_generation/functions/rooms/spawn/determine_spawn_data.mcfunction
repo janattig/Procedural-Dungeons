@@ -17,3 +17,6 @@ function pd_generation:rooms/spawn/choose_variation
 
 # copy data from the chosen marker to self
 data modify entity @s data merge from entity @e[tag=pd_chosen, tag=pd_room_variation, limit=1, sort=nearest] data
+
+# kill the last variation
+kill @e[tag=pd_room_variation, distance=..1]
