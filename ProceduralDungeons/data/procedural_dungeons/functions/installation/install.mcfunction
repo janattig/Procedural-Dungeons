@@ -1,3 +1,5 @@
+# installation of the math part
+function pd_math:installation/install
 # installation of the dimensions part
 function pd_dimensions:installation/install
 # installation of the portal part

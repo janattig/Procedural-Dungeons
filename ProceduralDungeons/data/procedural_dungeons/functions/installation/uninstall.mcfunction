@@ -6,3 +6,5 @@ function pd_portals:installation/uninstall
 function pd_generation:installation/uninstall
 # uninstall the maps part
 function pd_maps:installation/uninstall
+# uninstall the math part
+function pd_math:installation/uninstall

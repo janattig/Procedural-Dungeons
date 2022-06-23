@@ -51,13 +51,6 @@ scoreboard objectives add pd_room_border_w dummy
 
 
 
-# math
-scoreboard objectives add pd_math dummy
-scoreboard players set 2 pd_math 2
-scoreboard players set -2 pd_math -2
-scoreboard players set -1 pd_math -1
-
-
 
 
 
