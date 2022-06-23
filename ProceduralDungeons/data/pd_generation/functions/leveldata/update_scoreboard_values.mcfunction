@@ -8,6 +8,17 @@ execute unless score %min_grid_x pd_level_parameters matches -1000..1000 run tel
 execute unless score %max_grid_x pd_level_parameters matches -1000..1000 run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing scoreboard value "},{"text":"(max x grid size)","color":"red"}]
 execute unless score %min_grid_z pd_level_parameters matches -1000..1000 run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing scoreboard value "},{"text":"(min z grid size)","color":"red"}]
 execute unless score %max_grid_z pd_level_parameters matches -1000..1000 run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing scoreboard value "},{"text":"(max z grid size)","color":"red"}]
+execute unless score %max_num_rooms pd_level_parameters matches 1.. run tellraw @a ["",{"text":"> "},{"text":"PD GEN WARN:","color":"yellow"},{"text":" missing scoreboard value "},{"text":"(max room number)","color":"yellow"}]
+scoreboard players set %tmp_1 pd_level_parameters 1
+scoreboard players operation %tmp_1 pd_level_parameters += %max_grid_x pd_level_parameters
+scoreboard players operation %tmp_1 pd_level_parameters -= %min_grid_x pd_level_parameters
+scoreboard players set %tmp_2 pd_level_parameters 1
+scoreboard players operation %tmp_2 pd_level_parameters += %max_grid_z pd_level_parameters
+scoreboard players operation %tmp_2 pd_level_parameters -= %min_grid_z pd_level_parameters
+scoreboard players operation %tmp_1 pd_level_parameters *= %tmp_2 pd_level_parameters
+execute unless score %max_num_rooms pd_level_parameters matches 1.. run scoreboard players operation %max_num_rooms pd_level_parameters = %tmp_1 pd_level_parameters
+scoreboard players reset %tmp_1 pd_level_parameters
+scoreboard players reset %tmp_2 pd_level_parameters
 
 # update the size
 scoreboard players reset %room_size pd_level_parameters

@@ -23,6 +23,7 @@ execute unless score %min_grid_x pd_level_parameters matches -1000..1000 run sco
 execute unless score %max_grid_x pd_level_parameters matches -1000..1000 run scoreboard players set %can_be_generated pd_generation 0
 execute unless score %min_grid_z pd_level_parameters matches -1000..1000 run scoreboard players set %can_be_generated pd_generation 0
 execute unless score %max_grid_z pd_level_parameters matches -1000..1000 run scoreboard players set %can_be_generated pd_generation 0
+execute unless score %max_num_rooms pd_level_parameters matches 1.. run scoreboard players set %can_be_generated pd_generation 0
 
 # check if the start is set correctly
 execute unless score %start_y pd_level_parameters matches ..1 unless score %start_y pd_level_parameters matches 1.. run scoreboard players set %can_be_generated pd_generation 0
