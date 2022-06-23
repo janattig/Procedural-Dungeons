@@ -1,6 +1,8 @@
 # output
 tellraw @a [{"text":"  > building ", "color":"gray"}, {"text":"labyrinth", "color":"white"}, {"text":" layout", "color":"gray"}]
 
+# indicate that the lab is not finished
+scoreboard players set %lab_finished pd_level_parameters 0
 
 # first, prepare the grid
 function pd_generation:alg_labyrinth/prepare_grid
@@ -21,3 +23,6 @@ function pd_generation:alg_labyrinth/finalize_grid
 
 # output
 tellraw @a [{"text":"  > completed layout", "color":"gray"}]
+
+# indicate that the lab is finished
+scoreboard players set %lab_finished pd_level_parameters 1
