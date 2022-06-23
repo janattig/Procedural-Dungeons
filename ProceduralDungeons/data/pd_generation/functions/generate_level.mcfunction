@@ -11,7 +11,7 @@ scoreboard players set %min_grid_z pd_level_parameters -2
 scoreboard players set %max_grid_z pd_level_parameters 2
 
 scoreboard players set %max_num_rooms pd_level_parameters 17
-scoreboard players set %lab_loop_percentage pd_level_parameters 20
+#scoreboard players set %lab_loop_percentage pd_level_parameters 20
 
 scoreboard players operation %algorithm pd_level_parameters = %ALG_1_LABYRINTH pd_level_parameters
 
