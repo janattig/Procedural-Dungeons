@@ -19,3 +19,4 @@ function pd_math:rand/seed
 scoreboard players set 2 pd_math 2
 scoreboard players set -2 pd_math -2
 scoreboard players set -1 pd_math -1
+scoreboard players set 100 pd_math 100

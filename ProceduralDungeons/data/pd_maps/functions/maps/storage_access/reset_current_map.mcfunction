@@ -1,5 +1,9 @@
 # clear the memory and write standard values
 data modify storage procedural_dungeons:current_map id set value 0
+data modify storage procedural_dungeons:current_map algorithm set value 0
+data modify storage procedural_dungeons:current_map num_rooms set value 0
+data modify storage procedural_dungeons:current_map room_filling_percentage set value 0
+data modify storage procedural_dungeons:current_map lab_loop_percentage set value 0
 data modify storage procedural_dungeons:current_map display_name set value ""
 data remove storage procedural_dungeons:current_map dx
 data remove storage procedural_dungeons:current_map dz

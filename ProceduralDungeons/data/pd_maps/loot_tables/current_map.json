@@ -20,6 +20,11 @@
                   "op": "replace"
                 },
                 {
+                  "source": "algorithm",
+                  "target": "algorithm",
+                  "op": "replace"
+                },
+                {
                   "source": "min_x",
                   "target": "min_x",
                   "op": "replace"
@@ -43,6 +48,16 @@
                   "source": "is_ttt",
                   "target": "is_ttt",
                   "op": "replace"
+                },
+                {
+                  "source": "num_rooms",
+                  "target": "num_rooms",
+                  "op": "replace"
+                },
+                {
+                  "source": "lab_loop_percentage",
+                  "target": "lab_loop_percentage",
+                  "op": "replace"
                 }
               ]
             },
@@ -58,8 +73,7 @@
                   {
                     "nbt": "dx",
                     "storage": "procedural_dungeons:current_map",
-                    "color": "blue",
-                    "bold": true
+                    "color": "blue"
                   },
                   {
                     "text": "x",
@@ -68,8 +82,7 @@
                   {
                     "nbt": "dz",
                     "storage": "procedural_dungeons:current_map",
-                    "color": "blue",
-                    "bold": true
+                    "color": "blue"
                   },
                   {
                     "text": " rooms",
@@ -85,13 +98,87 @@
               "lore": [
                 [
                   {
+                    "text": "> contains ",
+                    "color": "gray"
+                  },
+                  {
+                    "nbt": "num_rooms",
+                    "storage": "procedural_dungeons:current_map",
+                    "color": "blue"
+                  },
+                  {
+                    "text": " rooms (",
+                    "color": "gray"
+                  },
+                  {
+                    "nbt": "room_filling_percentage",
+                    "storage": "procedural_dungeons:current_map",
+                    "color": "blue"
+                  },
+                  {
+                    "text": "%)",
+                    "color": "gray"
+                  }
+                ]
+              ],
+              "replace": false
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "> ",
+                    "color": "gray"
+                  },
+                  {
+                    "text": "Labyrinth",
+                    "color": "blue"
+                  },
+                  {
+                    "text": " map (",
+                    "color": "gray"
+                  },
+                  {
+                    "nbt": "lab_loop_percentage",
+                    "storage": "procedural_dungeons:current_map",
+                    "color": "blue"
+                  },
+                  {
+                    "text": "% loops)",
+                    "color": "gray"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "%is_labyrinth"
+                    },
+                    "score": "pd_maps"
+                  },
+                  "range": 1
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
                     "text": "> ",
                     "color": "gray"
                   },
                   {
                     "text": "Trouble in MC Town",
-                    "color": "blue",
-                    "bold": true
+                    "color": "blue"
                   },
                   {
                     "text": " level",

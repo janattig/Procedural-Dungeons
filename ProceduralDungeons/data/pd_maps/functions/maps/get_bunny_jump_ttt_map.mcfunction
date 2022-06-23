@@ -1,9 +1,6 @@
 # reset the data
 function pd_maps:maps/storage_access/reset_current_map
 
-# seed the LCG random number generation
-#function pd_math:rand/seed
-
 
 # set id (to later identify it in the generation process)
 data modify storage procedural_dungeons:current_map id set value 5
@@ -19,6 +16,19 @@ function pd_maps:maps/storage_access/store_random_map_size
 # map is a ttt map
 data modify storage procedural_dungeons:current_map is_ttt set value 1
 
+# map is generated with labyrinth algorithm
+execute store result storage procedural_dungeons:current_map algorithm int 1 run scoreboard players get %ALG_1_LABYRINTH pd_level_parameters
+
+# set the percentage of rooms
+scoreboard players set %LCG_rand_min pd_math 5
+scoreboard players set %LCG_rand_max pd_math 10
+function pd_math:rand/update
+execute store result storage procedural_dungeons:current_map room_filling_percentage int 10 run scoreboard players get %LCG_rand pd_math
+# set percentage of loops when attempting new connections to already connected rooms
+scoreboard players set %LCG_rand_min pd_math 5
+scoreboard players set %LCG_rand_max pd_math 40
+function pd_math:rand/update
+execute store result storage procedural_dungeons:current_map lab_loop_percentage int 1 run scoreboard players get %LCG_rand pd_math
 
 
 # finish the map, i.e. complete optional information and generate data for text
