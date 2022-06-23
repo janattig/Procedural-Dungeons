@@ -18,8 +18,11 @@ execute at @s run execute unless entity @e[tag=pd_room, distance=..1] run tag @s
 # check if the two rooms connect
 execute as @s[tag=lab_connect_rooms] at @s run execute as @e[tag=pd_room, tag=!lab_checked_east, distance=..1] run tag @s add lab_incoming
 
-# remove connection if loop chance is not given
-execute as @e[tag=lab_incoming, tag=lab_connected] run tag @s add lab_prevent_incoming
+# remove connection if loop chance not met
+scoreboard players set %LCG_rand_min pd_math 0
+scoreboard players set %LCG_rand_max pd_math 100
+function pd_math:rand/update
+execute as @e[tag=lab_incoming, tag=lab_connected] if score %LCG_rand pd_math > %lab_loop_percentage pd_level_parameters run tag @s add lab_prevent_incoming
 # remove connection if there are too many rooms connected already (and this goes into an unconnected room)
 execute as @e[tag=lab_incoming, tag=!lab_connected] if score %num_rooms pd_level_parameters >= %max_num_rooms pd_level_parameters run tag @s add lab_prevent_incoming
 # not incoming any more

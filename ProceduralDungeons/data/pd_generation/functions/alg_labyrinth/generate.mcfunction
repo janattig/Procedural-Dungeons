@@ -4,6 +4,9 @@ tellraw @a [{"text":"  > building ", "color":"gray"}, {"text":"labyrinth", "colo
 # indicate that the lab is not finished
 scoreboard players set %lab_finished pd_level_parameters 0
 
+# init the random number generator
+function pd_math:rand/seed
+
 # first, prepare the grid
 function pd_generation:alg_labyrinth/prepare_grid
 
