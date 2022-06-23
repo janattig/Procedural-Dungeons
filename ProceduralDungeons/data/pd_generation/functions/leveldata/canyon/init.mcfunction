@@ -1,2 +1,46 @@
 # add all rooms
-data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, south:1, east:1, west:1, file:"procedural_dungeons:rooms/canyon/test1"}
+
+# 1 - N
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_1_cave_spa"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_1_empty"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_1_plain_end"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_1_plain_start", start:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_1_ttt_start", start:1, ttt_only:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_1_upper_lake"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_1_upper_lake_open"}
+
+# 2i - NS
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2i_empty"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2i_plain"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2i_plain_start", start:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2i_roofed_spa"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2i_temple"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2i_ttt_start", start:1, ttt_only:1}
+
+# 2l - WS
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2l_cavern"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2l_empty"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2l_plain"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2l_plain_2"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2l_plain_start", start:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2l_roofed"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_2l_ttt_start", start:1, ttt_only:1}
+
+# 3 - NEW
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_cavern"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_empty"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_moon_canyon"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_multifloor_roofed"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_plain"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_plain_2"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_plain_3"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_plain_start", start:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_temple"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, north:1, east:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_3_ttt_start", start:1, ttt_only:1}
+
+# 4 - NSWE
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, east:1, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_4_empty"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, east:1, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_4_plain"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, east:1, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_4_plain_start", start:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, east:1, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_4_roofed_outpost"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, west:1, east:1, north:1, south:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_4_ttt_start", start:1, ttt_only:1}
