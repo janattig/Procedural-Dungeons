@@ -20,4 +20,6 @@ The entirety of Procedural Dungeons is split up into several (mostly independent
 
 4. [`pd_maps`](ProceduralDungeons/data/pd_maps) contains map items and a custom map device (structure) which is able to open portals to freshly generated custom dungeons, parametrized by the map items.
 
-5. [`procedural_dungeons`](ProceduralDungeons/data/procedural_dungeons) is the overarching namespace unifying every other subpackage.
+5. [`pd_math`](ProceduralDungeons/data/pd_math) contains math related functions, including a linear congruent generator for custom (pseudo) random numbers.
+
+6. [`procedural_dungeons`](ProceduralDungeons/data/procedural_dungeons) is the overarching namespace unifying every other subpackage and including structure data.
