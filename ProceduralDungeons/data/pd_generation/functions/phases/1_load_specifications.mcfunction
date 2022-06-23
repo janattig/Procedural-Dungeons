@@ -35,7 +35,7 @@ execute unless score %algorithm pd_level_parameters = %ALG_1_LABYRINTH pd_level_
 
 # either give error or continue with next phase
 execute unless score %can_be_generated pd_generation matches 1 run tellraw @a ["",{"text":"> "},{"text":"PD PHASE (1) ERROR:","color":"red"},{"text":" unable to generate level "},{"text":"(missing information)","color":"red"}]
-
+execute unless score %can_be_generated pd_generation matches 1 run scoreboard players set %level_fully_generated pd_generation -1
 # print information of level and continue to next phase
 execute if score %can_be_generated pd_generation matches 1 run function pd_generation:leveldata/print_level_info
 execute if score %can_be_generated pd_generation matches 1 run schedule function pd_generation:phases/2_clear_old_level 1t

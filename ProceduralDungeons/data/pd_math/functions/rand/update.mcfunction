@@ -7,5 +7,6 @@ scoreboard players set %LCG_range pd_math 1
 scoreboard players operation %LCG_range pd_math += %LCG_rand_max pd_math
 scoreboard players operation %LCG_range pd_math -= %LCG_rand_min pd_math
 scoreboard players operation %LCG_rand pd_math = %LCG_current pd_math
+scoreboard players operation %LCG_rand pd_math /= %LCG_a pd_math
 scoreboard players operation %LCG_rand pd_math %= %LCG_range pd_math
 scoreboard players operation %LCG_rand pd_math += %LCG_rand_min pd_math
