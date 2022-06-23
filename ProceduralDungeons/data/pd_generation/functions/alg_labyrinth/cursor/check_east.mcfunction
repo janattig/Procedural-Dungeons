@@ -20,6 +20,9 @@ execute as @s[tag=lab_connect_rooms] at @s run execute as @e[tag=pd_room, tag=!l
 
 # remove connection if loop chance is not given
 execute as @e[tag=lab_incoming, tag=lab_connected] run tag @s add lab_prevent_incoming
+# remove connection if there are too many rooms connected already (and this goes into an unconnected room)
+execute as @e[tag=lab_incoming, tag=!lab_connected] if score %num_rooms pd_level_parameters >= %max_num_rooms pd_level_parameters run tag @s add lab_prevent_incoming
+# not incoming any more
 execute as @e[tag=lab_prevent_incoming] run tag @s remove lab_incoming
 
 # the incoming room is being connected now to the outgoing room

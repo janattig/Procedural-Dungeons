@@ -27,6 +27,8 @@ scoreboard players reset %min_grid_x pd_level_parameters
 scoreboard players reset %min_grid_z pd_level_parameters
 scoreboard players reset %max_grid_x pd_level_parameters
 scoreboard players reset %max_grid_z pd_level_parameters
+# maximum number of rooms
+scoreboard players reset %max_num_rooms pd_level_parameters
 # dimension
 scoreboard players reset %dimension pd_level_parameters
 # algorithm for generation
