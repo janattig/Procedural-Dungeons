@@ -30,6 +30,9 @@ scoreboard players set %LCG_rand_max pd_math 40
 function pd_math:rand/update
 execute store result storage procedural_dungeons:current_map lab_loop_percentage int 1 run scoreboard players get %LCG_rand pd_math
 
+# set the portal target
+data modify storage procedural_dungeons:current_map portal_target set value [1.0d, 14.0d, 1.0d]
+
 
 # finish the map, i.e. complete optional information and generate data for text
 function pd_maps:maps/storage_access/finish_map

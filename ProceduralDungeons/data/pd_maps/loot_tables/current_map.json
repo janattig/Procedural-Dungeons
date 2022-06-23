@@ -58,6 +58,11 @@
                   "source": "lab_loop_percentage",
                   "target": "lab_loop_percentage",
                   "op": "replace"
+                },
+                {
+                  "source": "portal_target",
+                  "target": "portal_target",
+                  "op": "replace"
                 }
               ]
             },

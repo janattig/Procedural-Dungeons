@@ -12,15 +12,15 @@ kill @e[tag=pd_portal_tp_target]
 # summon a new target marker at the origin
 execute in overworld run summon minecraft:marker 0 1 0 {Tags:["pd_portal_tp_target"]}
 
+# teleport the marker to the target dimension
+execute store result score %target_tp_dimension pd_dimensions run data get entity @s data.destination_dim
+execute as @e[tag=pd_portal_tp_target] run function pd_dimensions:tp_self_to_target_dimension
+
 # set the correct target coordinates
 data modify entity @e[tag=pd_portal_tp_target, limit=1] Pos set from entity @s data.destination
 
 # set the correct rotation from the player that is teleported (so that tp feels good)
 data modify entity @e[tag=pd_portal_tp_target, limit=1] Rotation set from entity @a[tag=pd_portal_tp_player,limit=1] Rotation
-
-# teleport the marker to the target dimension
-execute store result score %target_tp_dimension pd_dimensions run data get entity @s data.destination_dim
-execute as @e[tag=pd_portal_tp_target] run function pd_dimensions:tp_self_to_target_dimension
 
 
 # let the marker teleport the player to itself
