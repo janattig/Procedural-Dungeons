@@ -69,13 +69,29 @@ When triggering the level generation, it runs through the following generation p
 
 
 
-### Room data / Adding new rooms to an existing level
 
-When adding new rooms into the code, one has to append an entry to the `procedural_dungeons:level_data all_rooms` data storage in the global [`init`](functions/leveldata/init.mcfunction) function or the equivalent functions of the individual already impelemented levels (e.g. the [`cave/init`](functions/leveldata/cave/init.mcfunction) function for the cave level). This new entry **must** have the fields
+### Rooms and structure data
+
+*Rooms* in terms of this level generation framework are structures which resemble a box of terrain and are characterized by their four cardinal boundaries (north, south, east and west). Each room is contained in a structure file, with all files currently being stored in the `procedural_dungeons` [structures folder](../procedural_dungeons/structures).
+
+When building structures, it is advised to load the provided bounding boxes (coming as extra structures in the respective folders, e.g. [`16x16x23_canyon_casing.nbt`](../procedural_dungeons/structures/16x16/canyon/16x16x23_canyon_casing.nbt) for the canyon world) and work from there on.
+
+As an example, a room for the canyon world with 3 connections is shown in the figure below:
+
+![](../../images/structure_blocks.png)
+
+If you build your own structures, you can save them e.g. in a similar manner in the [structures folder](../procedural_dungeons/structures).
+
+
+
+
+### Adding new rooms to an existing level
+
+When adding new room structures into the level generation code, one has first build an appropriate structure as shown above, and then append an entry to the `procedural_dungeons:level_data all_rooms` data storage in the global [`init`](functions/leveldata/init.mcfunction) function or the equivalent functions of the individual already impelemented levels (e.g. the [`cave/init`](functions/leveldata/cave/init.mcfunction) function for the cave level). This new entry **must** have the fields
 - `file` specifies the structure file of the room. Typically has a namespace and a file location, e.g. `"procedural_dungeons:rooms/bunny_jump/block_test"`
 - `size` specifies the dimension of the room in x and z directions. Must be specified as an integer
 - `map` gives a string which can be used to identify the level that the room belongs to later on
-- connectivity `north`, `north`, `north` and `north` for denoting the type of borders that the room has in all cardinal directions. If one of these is not specified, it will be set to `0`, denoting an *empty* border that connects to the empty unedited terrain of that level. Further, a setting of `1` is denoting a path, compatible with the labyrinth generation. Higher numbers indicate different border types in the wavefunction collapse algorithm.
+- connectivity `north`, `north`, `north` and `north` for denoting the type of borders that the room has in all cardinal directions (as shown in the example above). Note, that the cardinal directions can be extracted from using the `F3` information view. If one of these is not specified, it will be set to `0`, denoting an *empty* border that connects to the empty unedited terrain of that level. Further, a setting of `1` is denoting a path, compatible with the labyrinth generation. Higher numbers indicate different border types in the wavefunction collapse algorithm.
 
 Further, optional arguments can be specified. These will be set to default values if left unspecified:
 - `priority` (default value `-1`) used for when choosing equivalent between rooms. Rooms with higher priority are always chosen first
@@ -99,8 +115,8 @@ To add a new level, i.e. an entire new set of rooms in maybe even a new dimensio
 0. (Optional) *Add new dimension*. If you are using a new dimension, make sure to follow the steps of adding the dimension, outlined in the [Adding new dimensions](../pd_dimensions#adding-new-dimensions) section of the `pd_dimensions` package.
 
 1. Create a *leveldata folder* for your level inside the [`leveldata`](functions/leveldata/) folder, containing two files:
-    - `init.mcfunction` contains all initialization parts of your level, most importantly adding new rooms. Fill this file by adding in your rooms according to the [Adding new rooms](#room-data--adding-new-rooms-to-an-existing-level) section outlined above.
-    - `load.mcfunction` contains everything that happens once the level is actually loaded. This file is executed as the first step in level generation. Most importantly, the room set is chosen. Furthermore, the dimension number is set, as well as the lower boundary of the rooms (starting height of the grid generation). It is probably best if you have a look at an existing `load` file (e.g. for the `cave` world, which can be found [here](functions/leveldata/cave/load.mcfunction)).
+    - `init.mcfunction` contains all initialization parts of your level, most importantly adding new rooms. Fill this file by adding in your rooms according to the [Adding new rooms](#adding-new-rooms-to-an-existing-level) section outlined above.
+    - `load.mcfunction` contains everything that happens once the level is actually loaded. This file is executed as the first step in level generation. Most importantly, the room set is chosen. Furthermore, the dimension number is set, as well as the lower height at which the rooms are placed (starting height of the grid generation). It is probably best if you have a look at an existing `load` file (e.g. for the `cave` world, which can be found [here](functions/leveldata/cave/load.mcfunction)).
 
 2. Link to you `init` file from step 1. by adding a new line to the global [`init`](functions/leveldata/init.mcfunction) function, similar to how other levels are initialized. Your new line should read
     ```mcfunction
