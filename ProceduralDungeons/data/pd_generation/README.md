@@ -78,7 +78,7 @@ When building structures, it is advised to load the provided bounding boxes (com
 
 As an example, a room for the canyon world with 3 connections is shown in the figure below:
 
-![](../../images/structure_blocks.png)
+![](../../../images/structure_blocks.png)
 
 If you build your own structures, you can save them e.g. in a similar manner in the [structures folder](../procedural_dungeons/structures).
 
