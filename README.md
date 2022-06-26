@@ -34,7 +34,7 @@ In general, the Procedural Dungeons datapack is designed to be extended. Dependi
 
     If you want to provide new rooms for a level that is already being generated (e.g. from a map item), you have to do the following:
     - Build a room structure according to the details given [here](ProceduralDungeons/data/pd_generation#rooms-and-structure-data), especially respecting the different boundary types
-    - Add the room structure `.nbt` file into the respective [structures folder](../procedural_dungeons/structures).
+    - Add the room structure `.nbt` file into the respective [structures folder](ProceduralDungeons/data/procedural_dungeons/structures).
     - Add the room structure into the code by extending the respective `init` function of the level as outlined [here](ProceduralDungeons/data/pd_generation#adding-new-rooms-to-an-existing-level)
 
 2. *Remixing* a provided level / Adding new rooms along provided rooms
