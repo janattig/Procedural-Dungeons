@@ -1,6 +1,6 @@
 # Procedural Dungeons // pd_math
 
-Math capabilities for the Procedural Dungeons datapack. Includes some constants and a linear congruential generator ([LCG](https://en.wikipedia.org/wiki/Linear_congruential_generator)), implemented with scoreboard values in the scoreboard `pd_math`. It uses the values `a=1664525` and `c=1013904223` as well as the built-in integer overflow when performing the `mod m` operation.
+Math capabilities for the Procedural Dungeons datapack. Includes some constants and a linear congruential generator ([LCG](https://en.wikipedia.org/wiki/Linear_congruential_generator)) for custom random number generation, which is implemented with scoreboard values in the scoreboard `pd_math`. It uses the values `a=1664525` and `c=1013904223` as well as the built-in integer overflow when performing the `mod m` operation.
 
 For accessing the LCG, the following functions are provided:
 1. **Seeding the LCG** can be done with the function
