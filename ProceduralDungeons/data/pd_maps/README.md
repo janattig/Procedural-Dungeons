@@ -103,6 +103,29 @@ These functions have to have the following structure:
         data modify storage procedural_dungeons:current_map extent_max set value 10
         ```
         Depending on the chosen parameters, the other ones are complemented in step 3 of the function.
+    - *Room density* determines how many of the available rooms in the grid are actually filled. It is provided as a percentage number and can be either set explicitly with
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map room_filling_percentage set value 20
+        ```
+        ore drawn randomly by providing boundaries instead of the actual density
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map room_filling_percentage_min set value 50
+        data modify storage procedural_dungeons:current_map room_filling_percentage_max set value 100
+        ```
+    - *Loop chance (Labyrinth only)* determines the probability of connecting two already-connected rooms with a shortcut. This number is given as a percentage and can also either be specified explicitly with
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map lab_loop_percentage set value 20
+        ```
+        ore drawn randomly by providing boundaries instead of the actual density
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map lab_loop_percentage_min set value 10
+        data modify storage procedural_dungeons:current_map lab_loop_percentage_max set value 40
+        ```
+    - *Portal target* specifies the destination of map portals from the map device. Since the origin room is always the start of the level, the actual position can be specified explicitly even though the rest of the level is generated randomly. In principle, the data storage element encodes a position as
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map portal_target set value [0.5d, 64.0d, 0.5d]
+        ```
+        with the `x` and `z` coordinates being `0.5` for odd room sizes and `1.0` for even room sizes. The `y` coordinate depends on the actual floor height within the dimension
 
 
 3. **Finalize storage**
