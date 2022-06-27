@@ -27,3 +27,14 @@ function pd_maps:maps/get_skyblock_ttt_map
 
 
 ### Map device
+
+The *map device* is a structure which can accept *map items* in its central item frame and call level generation with the map parameters. To do so, one only has to place a map item in the item frame and push one of the buttoms on the gold block. Upon successful level generation, portals are opened to the starting area of the level.
+
+The map device structure is available as an `.nbt` file [here](structures/map_device.nbt), i.e. has the in-game reference
+```
+pd_maps:map_device
+```
+For simplicity, it can also be obtained for the player as a structure block (with the data already filled out) by calling
+```mcfunction
+/loot give @s loot pd_maps:map_device
+```
