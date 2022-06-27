@@ -30,14 +30,14 @@ The entirety of Procedural Dungeons is split up into several (mostly independent
 
 In general, the Procedural Dungeons datapack is designed to be extended. Depending on the amount of new content that should be added, this is more or less extensive.
 
-1. Building new rooms that are used in a certain level
+1. Building new rooms that should be used in a provided level
 
     If you want to provide new rooms for a level that is already being generated (e.g. from a map item), you have to do the following:
     - Build a room structure according to the details given [here](ProceduralDungeons/data/pd_generation#rooms-and-structure-data), especially respecting the different boundary types
     - Add the room structure `.nbt` file into the respective [structures folder](ProceduralDungeons/data/procedural_dungeons/structures).
     - Add the room structure into the code by extending the respective `init` function of the level as outlined [here](ProceduralDungeons/data/pd_generation#adding-new-rooms-to-an-existing-level)
 
-2. *Remixing* a provided level / Adding new rooms along provided rooms
+2. *Remixing* a provided level / changing algorithm, grid size and other level parameters
 
     In case you do not want to build any new structures but use the provided ones in a different context (exclude certain rooms, use a different algorithm, ...), you have to do two steps:
     - Provide a *map item* to your level following the specifications of the [`pd_maps`](ProceduralDungeons/data/pd_maps) subpackage
