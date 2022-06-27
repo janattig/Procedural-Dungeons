@@ -38,3 +38,56 @@ For simplicity, it can also be obtained for the player as a structure block (wit
 ```mcfunction
 loot give @s loot pd_maps:map_device
 ```
+
+
+
+
+### Adding custom maps
+
+The `pd_maps` package can be extended by adding more new map items. In principle, all one has to do is to implement a new `get_map` function, similar to the ones already implemented (e.g. [`get_caves_ttt_map`](functions/maps/get_caves_ttt_map) for the caves map).
+
+These functions have to have the following structure:
+
+1. **Clear storage**
+
+    Storage fields in `procedural_dungeons:current_map` are cleared by calling the function
+    ```mcfunction
+    function pd_maps:maps/storage_access/reset_current_map
+    ```
+
+2. **Set Parameters**
+
+    There are several parameters which are required or optional to be set in the data storage `procedural_dungeons:current_map`:
+    - *Map ID* gives the numeric identifier of level data which is matched with a leveldata set in the [`load_level_data`](functions/leveldata/load_level_data.mcfunction) function of the `pd_generation` package. Setting the id can be done with e.g.
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map id set value -2
+        ```
+    - *Display name* is a descriptive field to provide a *name* for the map item. Setting this field can be done with e.g.
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map display_name set value "Caves"
+        ```
+    - *Algorithm* determines the algorithm for generating the level. Here, an integer is required which matches the integer numbers of algorithms in the `pd_generation` package. It is therefore advised to use the following syntax to set it:
+        ```mcfunction
+        execute store result storage procedural_dungeons:current_map algorithm int 1 run scoreboard players get %ALG_1_LABYRINTH pd_level_parameters
+        ```
+    - *TTT (yes/no)* determines if the level is used to play [Trouble in MC Town](https://github.com/janattig/Trouble-In-MC-Town), a Trouble in Terrorist Town (TTT) implementation for Minecraft. If no information is given, it is currently assumed to be the case.
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map is_ttt set value 1
+        ```
+
+
+3. **Finalize storage**
+
+    By calling the function
+    ```mcfunction
+    function pd_maps:maps/storage_access/finish_map
+    ```
+    all storage fields are finalized. This includes setting optional parameters, fixing the actual values for parameters which only had a range given so far, and setting scoreboard values for further steps to proceed properly.
+
+4. **Give actual map item**
+
+    The actual map item is generated and given to the player (who calls the function)
+    ```mcfunction
+    loot give @s loot pd_maps:current_map
+    ```
+    Within the loot table, data from the data storage `procedural_dungeons:current_map` is copied onto the item and the description of the item is compiled.

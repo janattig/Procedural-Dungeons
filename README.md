@@ -40,7 +40,7 @@ In general, the Procedural Dungeons datapack is designed to be extended. Dependi
 2. *Remixing* a provided level / changing algorithm, grid size and other level parameters
 
     In case you do not want to build any new structures but use the provided ones in a different context (exclude certain rooms, use a different algorithm, ...), you have to do two steps:
-    - Provide a *map item* to your level following the specifications of the [`pd_maps`](ProceduralDungeons/data/pd_maps) subpackage
+    - Provide a *map item* to your level following the specifications of the [`pd_maps`](ProceduralDungeons/data/pd_maps#adding-custom-maps) subpackage
     - Provide a suitable `load` function for your level, as partially outlined [here](ProceduralDungeons/data/pd_generation#adding-an-entire-new-level)
     - In case you want to add your rooms, just also follow the steps of the previous point.
 
