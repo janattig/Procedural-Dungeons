@@ -17,10 +17,10 @@ For accessing the LCG, the following functions are provided:
 
     For practical purposes, mostly an integer in a certain range is desired. Such range can be set using some scoreboard operations, e.g.
     ```mcfunction
-    scoreboard players set %LCG_rand_min 4
-    scoreboard players set %LCG_rand_max 12
+    scoreboard players set %LCG_rand_min pd_math 4
+    scoreboard players set %LCG_rand_max pd_math 12
     ```
     for generating a random number between 4 and 12 (which are both included). The random number in this range can then be accessed by calling
     ```mcfunction
-    scoreboard players get %LCG_rand
+    scoreboard players get %LCG_rand pd_math
     ```
