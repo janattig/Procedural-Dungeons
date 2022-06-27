@@ -36,5 +36,5 @@ pd_maps:map_device
 ```
 For simplicity, it can also be obtained for the player as a structure block (with the data already filled out) by calling
 ```mcfunction
-/loot give @s loot pd_maps:map_device
+loot give @s loot pd_maps:map_device
 ```
