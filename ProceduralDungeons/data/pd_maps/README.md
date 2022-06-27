@@ -44,7 +44,7 @@ loot give @s loot pd_maps:map_device
 
 ### Adding custom maps
 
-The `pd_maps` package can be extended by adding more new map items. In principle, all one has to do is to implement a new `get_map` function, similar to the ones already implemented (e.g. [`get_caves_ttt_map`](functions/maps/get_caves_ttt_map) for the caves map).
+The `pd_maps` package can be extended by adding more new map items. In principle, all one has to do is to implement a new `get_map` function, similar to the ones already implemented (e.g. [`get_caves_ttt_map`](functions/maps/get_caves_ttt_map.mcfunction) for the caves map).
 
 These functions have to have the following structure:
 
@@ -58,7 +58,7 @@ These functions have to have the following structure:
 2. **Set Parameters**
 
     There are several parameters which are required or optional to be set in the data storage `procedural_dungeons:current_map`:
-    - *Map ID* gives the numeric identifier of level data which is matched with a leveldata set in the [`load_level_data`](functions/leveldata/load_level_data.mcfunction) function of the `pd_generation` package. Setting the id can be done with e.g.
+    - *Map ID* gives the numeric identifier of level data which is matched with a leveldata set in the [`load_level_data`](../pd_generation/functions/leveldata/load_level_data.mcfunction) function of the `pd_generation` package. Setting the id can be done with e.g.
         ```mcfunction
         data modify storage procedural_dungeons:current_map id set value -2
         ```
@@ -74,6 +74,35 @@ These functions have to have the following structure:
         ```mcfunction
         data modify storage procedural_dungeons:current_map is_ttt set value 1
         ```
+    - *Extent / Level size* can be determined in several ways. First and foremost, an explicit boundary of the room grid can be specified by setting the following storage values:
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map min_x set value -3
+        data modify storage procedural_dungeons:current_map max_x set value 2
+        data modify storage procedural_dungeons:current_map min_z set value -2
+        data modify storage procedural_dungeons:current_map max_z set value 1
+        ```
+        for simplicitly, one can also give the extent in the cardinal directions
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map extent_x set value 6
+        data modify storage procedural_dungeons:current_map extent_z set value 4
+        ```
+        or even the general extent in both directions
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map extent set value 6
+        ```
+        If the level size should be random, the extent can also be drawn randomly upon calling the function by providing boundaries instead of the actual extents
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map extent_x_min set value 5
+        data modify storage procedural_dungeons:current_map extent_x_max set value 10
+        data modify storage procedural_dungeons:current_map extent_z_min set value 5
+        data modify storage procedural_dungeons:current_map extent_z_max set value 10
+        ```
+        or if both extents should be drawn from the same range (but independently)
+        ```mcfunction
+        data modify storage procedural_dungeons:current_map extent_min set value 5
+        data modify storage procedural_dungeons:current_map extent_max set value 10
+        ```
+        Depending on the chosen parameters, the other ones are complemented in step 3 of the function.
 
 
 3. **Finalize storage**
