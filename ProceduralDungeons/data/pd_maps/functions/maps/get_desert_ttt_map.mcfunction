@@ -2,36 +2,42 @@
 function pd_maps:maps/storage_access/reset_current_map
 
 
-# set id (to later identify it in the generation process)
+##############################
+# MAP PARAMETERS
+# - ID
+# - display_name
+# - algorithm
+# - (ttt yes/no = yes)
+# - linear extent:
+#   - min_x, max_x, min_z, max_z
+#   - extent_x, extent_z
+#   - extent_x_min, extent_x_max, ...
+#   - extent
+#   - extent_min, extent_max
+# - (room filling = 100%)
+#   - room_filling_percentage
+#   - room_filling_percentage_min, room_filling_percentage_max
+# - (loop chance = 10%)
+#   - lab_loop_percentage
+#   - lab_loop_percentage_min, lab_loop_percentage_max
+# - portal_target
+##############################
+
+
+
+# set all parameters
 data modify storage procedural_dungeons:current_map id set value 3
-# set the displayed name to modify the title of the map item
-# items title will read "DISPLAY_NAME Map"
 data modify storage procedural_dungeons:current_map display_name set value "Desert"
-
-# set the map size
-scoreboard players set %extent_min pd_maps 4
-scoreboard players set %extent_max pd_maps 10
-function pd_maps:maps/storage_access/store_random_map_size
-
-# map is a ttt map
-data modify storage procedural_dungeons:current_map is_ttt set value 1
-
-# map is generated with labyrinth algorithm
 execute store result storage procedural_dungeons:current_map algorithm int 1 run scoreboard players get %ALG_1_LABYRINTH pd_level_parameters
-
-# set the percentage of rooms
-scoreboard players set %LCG_rand_min pd_math 3
-scoreboard players set %LCG_rand_max pd_math 10
-function pd_math:rand/update
-execute store result storage procedural_dungeons:current_map room_filling_percentage int 10 run scoreboard players get %LCG_rand pd_math
-# set percentage of loops when attempting new connections to already connected rooms
-scoreboard players set %LCG_rand_min pd_math 10
-scoreboard players set %LCG_rand_max pd_math 40
-function pd_math:rand/update
-execute store result storage procedural_dungeons:current_map lab_loop_percentage int 1 run scoreboard players get %LCG_rand pd_math
-
-# set the portal target
+data modify storage procedural_dungeons:current_map is_ttt set value 1
+data modify storage procedural_dungeons:current_map extent_min set value 4
+data modify storage procedural_dungeons:current_map extent_max set value 8
+data modify storage procedural_dungeons:current_map room_filling_percentage_min set value 60
+data modify storage procedural_dungeons:current_map room_filling_percentage_max set value 100
+data modify storage procedural_dungeons:current_map lab_loop_percentage_min set value 10
+data modify storage procedural_dungeons:current_map lab_loop_percentage_max set value 30
 data modify storage procedural_dungeons:current_map portal_target set value [0.5d, 69.0d, 0.5d]
+
 
 
 # finish the map, i.e. complete optional information and generate data for text
