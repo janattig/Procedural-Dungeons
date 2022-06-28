@@ -17,7 +17,7 @@ data remove storage procedural_dungeons:current_level all_variations_tmp
 
 
 # choose one of the room variations (random)
-function pd_generation:rooms/spawn/choose_variation
+function pd_generation:rooms/variations/choose_random
 
 
 # copy data from the chosen marker to self
