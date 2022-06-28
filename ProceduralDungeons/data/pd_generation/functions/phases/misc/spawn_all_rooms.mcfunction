@@ -1,6 +1,6 @@
 # choose a random unspawned room
 tag @e remove pd_spawning_now
-execute as @e[tag=pd_room, tag=!pd_spawned, limit=1] at @s run tag @s add pd_spawning_now
+execute as @e[tag=pd_room, tag=!pd_spawned, limit=1, sort=random] at @s run tag @s add pd_spawning_now
 
 # spawn this room
 execute as @e[tag=pd_room, tag=pd_spawning_now] at @s run function pd_generation:rooms/spawn_room

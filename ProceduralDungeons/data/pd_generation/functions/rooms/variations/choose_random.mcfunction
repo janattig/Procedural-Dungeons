@@ -1,3 +1,5 @@
+# choose the room variation marker at random
+
 # assign numbers to the variations
 function pd_generation:rooms/variations/assign_numbers
 
