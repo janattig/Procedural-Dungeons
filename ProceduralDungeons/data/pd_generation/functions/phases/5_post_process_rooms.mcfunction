@@ -1,5 +1,5 @@
 # output
 tellraw @a ["",{"text":"> "},{"text":"(5)","color":"blue"},{"text":": post-processing rooms"}]
 
-# temporary: only call finalize function
-function pd_generation:phases/6_finalize
+# post process rooms
+function pd_generation:phases/misc/post_process_all_rooms
