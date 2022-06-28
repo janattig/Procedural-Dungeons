@@ -1,5 +1,6 @@
 # give itself a tag for comparison purposes
 tag @e remove pd_to_be_compared_to
+tag @s add pd_to_be_compared_to
 
 # look in all other spawned rooms for the same id and de-prioritize if found
 execute as @e[tag=pd_room, tag=pd_spawned, distance=1..] run execute if score @s pd_room_id = @e[tag=pd_to_be_compared_to, limit=1] pd_room_id run scoreboard players remove @e[tag=pd_to_be_compared_to, limit=1] pd_room_priority 1
