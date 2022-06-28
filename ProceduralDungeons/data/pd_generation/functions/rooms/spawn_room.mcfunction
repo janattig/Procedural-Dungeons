@@ -1,3 +1,7 @@
+# mark the position for reset later on
+execute store result score %reset_region_size pd_dimensions run data get entity @s data.size 1
+execute positioned ~ ~ ~ run function pd_dimensions:register_region_for_reset_here
+
 # prepare filename
 function pd_generation:rooms/spawn/determine_spawn_data
 
