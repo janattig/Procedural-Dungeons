@@ -17,7 +17,7 @@ scoreboard players operation %max_x pd_room_parameters = %min_x pd_room_paramete
 scoreboard players operation %max_z pd_room_parameters = %min_z pd_room_parameters
 scoreboard players operation %max_x pd_room_parameters += %size pd_room_parameters
 scoreboard players operation %max_z pd_room_parameters += %size pd_room_parameters
-scoreboard players set %size_y pd_room_parameters 30
+scoreboard players operation %size_y pd_room_parameters = %post_processing_size_y pd_level_parameters
 scoreboard players operation %max_y pd_room_parameters = %size_y pd_room_parameters
 scoreboard players operation %max_y pd_room_parameters += %min_y pd_room_parameters
 scoreboard players add %min_x pd_room_parameters 1

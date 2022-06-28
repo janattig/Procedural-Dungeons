@@ -34,6 +34,12 @@ scoreboard players set %start_y pd_level_parameters 50
 ```
 starting values for x and z coordinates are `0`.
 
+Another (optional) parameter is the height of the room which is post processed (above the bottom layer). This can be set by e.g.
+```mcfunction
+scoreboard players set %post_processing_size_y pd_level_parameters 32
+```
+or left out which defaults to a value of `20`
+
 Note, that these values have not to be given explicitly when using [maps](../pd_maps) from the [`pd_maps`](../pd_maps) subpackage, as these carry and set the parameters automatically.
 
 

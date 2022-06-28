@@ -9,3 +9,6 @@ execute store result storage procedural_dungeons:current_level dimension int 1 r
 # set the starting height of the algorithm.
 # This is also the height of the lowest row of blocks in the rooms
 scoreboard players set %start_y pd_level_parameters 62
+
+# set the post processing height (y) of the algorithm (layers above start_y)
+scoreboard players set %post_processing_size_y pd_level_parameters 6
