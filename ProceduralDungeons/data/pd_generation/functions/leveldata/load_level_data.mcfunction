@@ -17,6 +17,8 @@ execute if score %level_to_generate pd_generation matches 3 run function pd_gene
 execute if score %level_to_generate pd_generation matches -3 run function pd_generation:leveldata/sewer/load
 execute if score %level_to_generate pd_generation matches 2 run function pd_generation:leveldata/skyblock/load
 
+execute if score %level_to_generate pd_generation matches 4321 run function pd_generation:leveldata/demo_test/load
+
 
 
 

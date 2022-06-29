@@ -13,6 +13,8 @@ function pd_generation:leveldata/desert/init
 function pd_generation:leveldata/sewer/init
 function pd_generation:leveldata/skyblock/init
 
+function pd_generation:leveldata/demo_test/init
+
 
 # three fails (to test checks)
 #data modify storage procedural_dungeons:level_data all_rooms append value {file:"procedural_dungeons:rooms/fail/fail1", map:"canyon", north:1, south:1, east:1, west:1}
