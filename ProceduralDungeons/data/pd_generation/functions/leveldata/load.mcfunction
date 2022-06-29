@@ -10,3 +10,4 @@ function pd_generation:leveldata/update_scoreboard_values
 
 # generate variations of current rooms
 function pd_generation:leveldata/generate_room_variations
+function pd_generation:leveldata/generate_connectivity_variations
