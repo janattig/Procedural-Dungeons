@@ -45,6 +45,7 @@ scoreboard players reset %start_y pd_level_parameters
 scoreboard objectives add pd_room_parameters dummy
 scoreboard objectives add pd_room_priority dummy
 scoreboard objectives add pd_room_id dummy
+scoreboard objectives add pd_room_border dummy
 scoreboard objectives add pd_room_border_n dummy
 scoreboard objectives add pd_room_border_s dummy
 scoreboard objectives add pd_room_border_e dummy
