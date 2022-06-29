@@ -34,8 +34,8 @@ data modify storage procedural_dungeons:reset_regions to_be_reset_backup set val
 ### overworld ###
 # set the dimension number
 scoreboard players set %overworld pd_dimensions 0
-# forceload origin
-execute in minecraft:overworld run forceload add ~ ~
+# setup forceload for the dimension
+execute in minecraft:overworld run function pd_dimensions:installation/setup_forceload_here
 
 
 ### bunny_jump ###
