@@ -1,0 +1,5 @@
+# resolve all connections to all cardinal directions
+function pd_generation:alg_wave_collapse/variation_markers/border/resolve_north
+function pd_generation:alg_wave_collapse/variation_markers/border/resolve_south
+function pd_generation:alg_wave_collapse/variation_markers/border/resolve_east
+function pd_generation:alg_wave_collapse/variation_markers/border/resolve_west

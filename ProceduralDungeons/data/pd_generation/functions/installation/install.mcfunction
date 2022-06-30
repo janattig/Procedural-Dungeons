@@ -57,7 +57,10 @@ scoreboard objectives add pd_labyrinth dummy
 scoreboard players set %moves_per_tick pd_labyrinth 400
 scoreboard players reset %current_moves pd_labyrinth
 
-
+# information of wavefunction collapse algorithm
+scoreboard objectives add wfc_distances dummy
+scoreboard objectives add wfc_connections dummy
+scoreboard objectives add wfc_coordinates dummy
 
 
 
