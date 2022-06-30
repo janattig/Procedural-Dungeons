@@ -17,7 +17,7 @@ execute as @e[tag=pd_room, tag=!pd_spawned] at @s run scoreboard players add %un
 
 
 # if there are more rooms to spawn, schedule the function again
-execute if score %unspawned_rooms pd_level_parameters matches 1.. run schedule function pd_generation:phases/misc/spawn_all_rooms 5t
+execute if score %unspawned_rooms pd_level_parameters matches 1.. run schedule function pd_generation:phases/misc/spawn_all_rooms 1t
 
 # if there are no more rooms, schedule the next phase
-execute if score %unspawned_rooms pd_level_parameters matches 0 run schedule function pd_generation:phases/5_post_process_rooms 20t
+execute if score %unspawned_rooms pd_level_parameters matches 0 run schedule function pd_generation:phases/5_post_process_rooms 2t

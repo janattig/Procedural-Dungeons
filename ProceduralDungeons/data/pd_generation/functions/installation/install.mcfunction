@@ -53,7 +53,7 @@ scoreboard objectives add pd_room_border_w dummy
 
 # information of labyrinth algorithm
 scoreboard objectives add pd_labyrinth dummy
-scoreboard players set %moves_per_tick pd_labyrinth 1
+scoreboard players set %moves_per_tick pd_labyrinth 400
 scoreboard players reset %current_moves pd_labyrinth
 
 
