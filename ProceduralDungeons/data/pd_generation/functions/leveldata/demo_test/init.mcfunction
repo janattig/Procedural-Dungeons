@@ -20,3 +20,11 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 # 4 - NSWE
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"demo_test", size:5, west:1, east:1, north:1, south:1, file:"procedural_dungeons:demo_test/demo_test_4"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"demo_test", size:5, west:1, east:1, north:1, south:1, file:"procedural_dungeons:demo_test/demo_test_4_start", start:1, ttt_only:1}
+
+
+
+
+
+# 4 - MISC
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"demo_test", size:5, west:2, east:2, north:1, file:"procedural_dungeons:demo_test/demo_test_wfc_1", priority:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"demo_test", size:5, north:2, file:"procedural_dungeons:demo_test/demo_test_wfc_2", priority:1}
