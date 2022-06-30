@@ -8,7 +8,7 @@ scoreboard players set @s wfc_connections 0
 execute as @e[tag=pd_border_variation, distance=..0.1] at @s run function pd_generation:alg_wave_collapse/variation_markers/validation/check_border_variation
 
 # count how many are unsupported
-execute at @e[tag=pd_border_variation,tag=wfc_unsupported, distance=..0.1] at @s run scoreboard players add @s wfc_connections 1
+execute at @e[tag=pd_border_variation,tag=wfc_unsupported, distance=..0.1] run scoreboard players add @s wfc_connections 1
 
 # kill the unsupported variations
 execute as @e[tag=pd_border_variation,tag=wfc_unsupported, distance=..0.1] at @s run kill @s
