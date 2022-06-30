@@ -10,6 +10,7 @@ scoreboard objectives add pd_generation dummy
 scoreboard players reset %level_to_generate pd_generation
 # indicator if currently generating or idle
 scoreboard players set %generation_in_progress pd_generation 0
+scoreboard players set %level_fully_generated pd_generation -1
 
 
 
