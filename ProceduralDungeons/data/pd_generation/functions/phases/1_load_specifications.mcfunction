@@ -2,6 +2,15 @@
 tellraw @a ["",{"text":"> "},{"text":"(1)","color":"blue"},{"text":": loading level specifications"}]
 
 
+# remove every level marker of previous level
+kill @e[tag=pd_room]
+kill @e[tag=pd_border]
+kill @e[tag=pd_room_variation]
+kill @e[tag=pd_border_variation]
+kill @e[tag=pd_decoration]
+
+
+
 # load the level data
 function pd_generation:leveldata/load
 

@@ -4,7 +4,9 @@ tellraw @a ["",{"text":"> "},{"text":"(6)","color":"blue"},{"text":": finalizing
 
 # remove every level marker
 kill @e[tag=pd_room]
+kill @e[tag=pd_border]
 kill @e[tag=pd_room_variation]
+kill @e[tag=pd_border_variation]
 kill @e[tag=pd_decoration]
 
 # level is generated now

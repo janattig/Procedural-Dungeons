@@ -1,0 +1,6 @@
+# add borders to rooms
+function pd_generation:alg_wave_collapse/variation_markers/add_border_to_rooms
+
+# setup the variations
+function pd_generation:alg_wave_collapse/variation_markers/setup_room_variations
+function pd_generation:alg_wave_collapse/variation_markers/setup_border_variations
