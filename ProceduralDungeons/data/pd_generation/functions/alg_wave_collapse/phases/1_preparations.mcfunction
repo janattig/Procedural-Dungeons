@@ -9,3 +9,4 @@ function pd_generation:alg_wave_collapse/prepare_wavefunction
 
 
 # schedule next phase
+schedule function pd_generation:alg_wave_collapse/phases/2_initial_conditions 1t
