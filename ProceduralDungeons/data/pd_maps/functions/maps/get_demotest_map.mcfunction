@@ -28,14 +28,14 @@ function pd_maps:maps/storage_access/reset_current_map
 # set all parameters
 data modify storage procedural_dungeons:current_map id set value 4321
 data modify storage procedural_dungeons:current_map display_name set value "Demo TEST"
-execute store result storage procedural_dungeons:current_map algorithm int 1 run scoreboard players get %ALG_2_WAVEFUNCTION_COLLAPSE pd_level_parameters
+execute store result storage procedural_dungeons:current_map algorithm int 1 run scoreboard players get %ALG_3_LABYRINTH_WAVE pd_level_parameters
 data modify storage procedural_dungeons:current_map is_ttt set value 1
 data modify storage procedural_dungeons:current_map extent_min set value 3
 data modify storage procedural_dungeons:current_map extent_max set value 8
 data modify storage procedural_dungeons:current_map room_filling_percentage_min set value 30
 data modify storage procedural_dungeons:current_map room_filling_percentage_max set value 80
-data modify storage procedural_dungeons:current_map lab_loop_percentage_min set value 10
-data modify storage procedural_dungeons:current_map lab_loop_percentage_max set value 30
+data modify storage procedural_dungeons:current_map lab_loop_percentage_min set value 2
+data modify storage procedural_dungeons:current_map lab_loop_percentage_max set value 5
 data modify storage procedural_dungeons:current_map portal_target set value [0.5d, 5.0d, 0.5d]
 
 

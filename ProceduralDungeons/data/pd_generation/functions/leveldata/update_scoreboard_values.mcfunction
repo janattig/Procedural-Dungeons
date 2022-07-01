@@ -42,7 +42,7 @@ execute if score %max_grid_z pd_level_parameters matches -1000..1000 run scorebo
 execute if score %max_grid_z pd_level_parameters matches -1000..1000 run scoreboard players operation %max_z pd_level_parameters *= %room_size pd_level_parameters
 
 # check if the algorithm is set correctly
-execute unless score %algorithm pd_level_parameters = %ALG_1_LABYRINTH pd_level_parameters unless score %algorithm pd_level_parameters = %ALG_2_WAVEFUNCTION_COLLAPSE pd_level_parameters run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing scoreboard value "},{"text":"(algorithm)","color":"red"}]
+execute unless score %algorithm pd_level_parameters = %ALG_1_LABYRINTH pd_level_parameters unless score %algorithm pd_level_parameters = %ALG_2_WAVEFUNCTION_COLLAPSE pd_level_parameters unless score %algorithm pd_level_parameters = %ALG_3_LABYRINTH_WAVE pd_level_parameters run tellraw @a ["",{"text":"> "},{"text":"PD GEN ERROR:","color":"red"},{"text":" missing scoreboard value "},{"text":"(algorithm)","color":"red"}]
 
 # check post processing height
 execute unless score %max_num_rooms pd_level_parameters matches 1..100 run tellraw @a ["",{"text":"> "},{"text":"PD GEN WARN:","color":"yellow"},{"text":" missing scoreboard value "},{"text":"(post process dy)","color":"yellow"}]

@@ -38,7 +38,7 @@ execute unless score %max_num_rooms pd_level_parameters matches 1.. run scoreboa
 execute unless score %start_y pd_level_parameters matches ..1 unless score %start_y pd_level_parameters matches 1.. run scoreboard players set %can_be_generated pd_generation 0
 
 # check if the algorithm is set correctly
-execute unless score %algorithm pd_level_parameters = %ALG_1_LABYRINTH pd_level_parameters unless score %algorithm pd_level_parameters = %ALG_2_WAVEFUNCTION_COLLAPSE pd_level_parameters run scoreboard players set %can_be_generated pd_generation 0
+execute unless score %algorithm pd_level_parameters = %ALG_1_LABYRINTH pd_level_parameters unless score %algorithm pd_level_parameters = %ALG_2_WAVEFUNCTION_COLLAPSE pd_level_parameters unless score %algorithm pd_level_parameters = %ALG_3_LABYRINTH_WAVE pd_level_parameters run scoreboard players set %can_be_generated pd_generation 0
 
 
 
