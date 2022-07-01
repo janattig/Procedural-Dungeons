@@ -28,10 +28,13 @@
 # generate scoreboard value if the map is assembled by which algorithm
 scoreboard players set %is_labyrinth pd_maps 0
 scoreboard players set %is_wavefunction pd_maps 0
+scoreboard players set %is_lab_wave pd_maps 0
 execute store result score %tmp1 pd_maps run data get storage procedural_dungeons:current_map algorithm
 execute if score %tmp1 pd_maps = %ALG_1_LABYRINTH pd_level_parameters run scoreboard players set %is_labyrinth pd_maps 1
 execute if score %tmp1 pd_maps = %ALG_2_WAVEFUNCTION_COLLAPSE pd_level_parameters run scoreboard players set %is_wavefunction pd_maps 1
+execute if score %tmp1 pd_maps = %ALG_3_LABYRINTH_WAVE pd_level_parameters run scoreboard players set %is_lab_wave pd_maps 1
 scoreboard players reset %tmp1 pd_maps
+
 
 ### TTT
 
