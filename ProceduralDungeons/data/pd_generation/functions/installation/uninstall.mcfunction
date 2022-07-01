@@ -1,0 +1,18 @@
+# remove scoreboards
+scoreboard objectives remove pd_generation
+
+scoreboard objectives remove pd_level_parameters
+scoreboard objectives remove pd_room_parameters
+scoreboard objectives remove pd_room_priority
+scoreboard objectives remove pd_room_id
+scoreboard objectives remove pd_room_border
+scoreboard objectives remove pd_room_border_n
+scoreboard objectives remove pd_room_border_s
+scoreboard objectives remove pd_room_border_e
+scoreboard objectives remove pd_room_border_w
+
+scoreboard objectives remove pd_labyrinth
+
+scoreboard objectives remove wfc_distances
+scoreboard objectives remove wfc_connections
+scoreboard objectives remove wfc_coordinates
