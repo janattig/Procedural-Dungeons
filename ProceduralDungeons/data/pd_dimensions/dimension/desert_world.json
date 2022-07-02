@@ -1,25 +1,7 @@
 {
-  "type": {
-    "name": "procedural_dungeons:desert_world",
-    "ultrawarm": false,
-    "natural": false,
-    "piglin_safe": false,
-    "respawn_anchor_works": false,
-    "bed_works": false,
-    "has_raids": true,
-    "has_skylight": true,
-    "has_ceiling": false,
-    "coordinate_scale": 1,
-    "ambient_light": 0,
-    "fixed_time": 12000,
-    "logical_height": 256,
-    "height": 256,
-    "min_y": 0,
-    "infiniburn": "#minecraft:infiniburn_overworld"
-  },
+  "type": "pd_dimensions:custom_level_dimension",
   "generator": {
     "type": "minecraft:flat",
-    "seed": -1663031682,
     "settings": {
       "lakes": false,
       "features": false,
