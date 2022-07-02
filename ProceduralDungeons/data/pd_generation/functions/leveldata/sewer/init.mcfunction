@@ -6,6 +6,7 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, north:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_1_end_cavein"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, north:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_1_green_ending"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, north:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_1_pipe_sinkhole"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, north:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_1_bandit_camp"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, north:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_1_startfield", start:1}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, north:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_1_startfield_ttt", start:1, ttt_only:1}
 
@@ -26,6 +27,7 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, west:1, south:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_2l_startfield_ttt", start:1, ttt_only:1}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, west:1, south:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_2l_tunnel_1"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, west:1, south:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_2l_tunnel_cavein"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, west:1, south:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_2l_diamond_mine"}
 
 # 3 - NEW
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"sewer", size:15, west:1, north:1, east:1, file:"procedural_dungeons:15x15/sewer/15x15_sewers_3_crossing"}
