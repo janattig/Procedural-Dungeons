@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{BlockEntityTag:{mode:\"LOAD\",name:\"pd_maps:map_device_extended\",sizeX:17,sizeZ:17,posX:-8,posY:0,posZ:-8,rotation:\"NONE\",showboundingbox:1b,ignoreEntities:0b}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
