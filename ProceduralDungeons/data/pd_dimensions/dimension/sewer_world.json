@@ -1,11 +1,15 @@
 {
-  "type": "pd_dimensions:custom_level_dimension",
+  "type": "minecraft:overworld",
   "generator": {
     "type": "minecraft:flat",
     "settings": {
       "lakes": false,
       "features": false,
       "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 64
+        },
         {
           "block": "minecraft:bedrock",
           "height": 1
