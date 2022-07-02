@@ -9,15 +9,15 @@ execute unless score %level_to_generate pd_generation matches ..1 unless score %
 # clear data of the current level
 function pd_generation:leveldata/clear_current_level_data
 
-# check for which level the load function should be called
-execute if score %level_to_generate pd_generation matches 5 run function pd_generation:leveldata/bunny_jump/load
-execute if score %level_to_generate pd_generation matches 4 run function pd_generation:leveldata/canyon/load
-execute if score %level_to_generate pd_generation matches -2 run function pd_generation:leveldata/cave/load
-execute if score %level_to_generate pd_generation matches 3 run function pd_generation:leveldata/desert/load
-execute if score %level_to_generate pd_generation matches -3 run function pd_generation:leveldata/sewer/load
-execute if score %level_to_generate pd_generation matches 2 run function pd_generation:leveldata/skyblock/load
+# check which tileset should be loaded
+execute if score %level_to_generate pd_generation matches 5 run function pd_generation:leveldata/tilesets/bunny_jump/load
+execute if score %level_to_generate pd_generation matches 4 run function pd_generation:leveldata/tilesets/canyon/load
+execute if score %level_to_generate pd_generation matches -2 run function pd_generation:leveldata/tilesets/cave/load
+execute if score %level_to_generate pd_generation matches 3 run function pd_generation:leveldata/tilesets/desert/load
+execute if score %level_to_generate pd_generation matches -3 run function pd_generation:leveldata/tilesets/sewer/load
+execute if score %level_to_generate pd_generation matches 2 run function pd_generation:leveldata/tilesets/skyblock/load
 
-execute if score %level_to_generate pd_generation matches 4321 run function pd_generation:leveldata/demo_test/load
+execute if score %level_to_generate pd_generation matches 4321 run function pd_generation:leveldata/tilesets/demo_test/load
 
 
 

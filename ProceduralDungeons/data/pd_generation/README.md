@@ -93,7 +93,7 @@ If you build your own structures, you can save them e.g. in a similar manner in 
 
 ### Adding new rooms to an existing level
 
-When adding new room structures into the level generation code, one has first build an appropriate structure as shown above, and then append an entry to the `procedural_dungeons:level_data all_rooms` data storage in the global [`init`](functions/leveldata/init.mcfunction) function or the equivalent functions of the individual already impelemented levels (e.g. the [`cave/init`](functions/leveldata/cave/init.mcfunction) function for the cave level). This new entry **must** have the fields
+When adding new room structures into the level generation code, one has first build an appropriate structure as shown above. Then, the structure can be added to the appropriate tileset by appending an entry to the `procedural_dungeons:level_data all_rooms` data storage in the global [`init`](functions/leveldata/init.mcfunction) function or the equivalent functions of the individual already impelemented levels (e.g. the [`tilesets/cave/init`](functions/leveldata/tilesets/cave/init.mcfunction) function for the cave level). This new entry **must** have the fields
 - `file` specifies the structure file of the room. Typically has a namespace and a file location, e.g. `"procedural_dungeons:rooms/bunny_jump/block_test"`
 - `size` specifies the dimension of the room in x and z directions. Must be specified as an integer
 - `map` gives a string which can be used to identify the level that the room belongs to later on
@@ -120,16 +120,16 @@ To add a new level, i.e. an entire new set of rooms in maybe even a new dimensio
 
 0. (Optional) *Add new dimension*. If you are using a new dimension, make sure to follow the steps of adding the dimension, outlined in the [Adding new dimensions](../pd_dimensions#adding-new-dimensions) section of the `pd_dimensions` package.
 
-1. Create a *leveldata folder* for your level inside the [`leveldata`](functions/leveldata/) folder, containing two files:
-    - `init.mcfunction` contains all initialization parts of your level, most importantly adding new rooms. Fill this file by adding in your rooms according to the [Adding new rooms](#adding-new-rooms-to-an-existing-level) section outlined above.
-    - `load.mcfunction` contains everything that happens once the level is actually loaded. This file is executed as the first step in level generation. Most importantly, the room set is chosen. Furthermore, the dimension number is set, as well as the lower height at which the rooms are placed (starting height of the grid generation). It is probably best if you have a look at an existing `load` file (e.g. for the `cave` world, which can be found [here](functions/leveldata/cave/load.mcfunction)).
+1. Create a *tileset folder* for your level inside the [`tilesets/`](functions/leveldata/tilesets/) folder, containing two files:
+    - `init.mcfunction` contains all initialization parts of your tileset, i.e. adding new rooms. Fill this file by adding in your rooms according to the [Adding new rooms](#adding-new-rooms-to-an-existing-level) section outlined above.
+    - One ore several `load.mcfunction` files. These functions load the tileset when a level is generated as the first step in level generation. In a `load` file, the room set is chosen and further parameters are specified, which are the dimension number and the lower height at which the rooms are placed (starting height of the grid generation). It is probably best if you have a look at an existing `load` file (e.g. for the `cave` world, which can be found [here](functions/leveldata/tilesets/cave/load.mcfunction)).
 
 2. Link to you `init` file from step 1. by adding a new line to the global [`init`](functions/leveldata/init.mcfunction) function, similar to how other levels are initialized. Your new line should read
     ```mcfunction
-    function pd_generation:leveldata/your_level_name/init
+    function pd_generation:leveldata/tilesets/your_level_name/init
     ```
 
-3. Link to your `load` file from step 1. by adding a new line to the [`load_level_data`](functions/leveldata/load_level_data.mcfunction) function. Here, the scoreboard value `%level_to_generate pd_generation` is used to determine which individual `load` function is called. This means that here, you have to choose a unique identifier (integer) for your level. Your final line should be of the form
+3. Link to your `load` file(S) from step 1. by adding a new line to the [`load_level_data`](functions/leveldata/load_level_data.mcfunction) function. Here, the scoreboard value `%level_to_generate pd_generation` is used to determine which individual `load` function is called. This means that here, you have to choose a unique identifier (integer) for your tileset. Your final line should be of the form
     ```mcfunction
-    execute if score %level_to_generate pd_generation matches YOUR_LEVEL_ID run function pd_generation:leveldata/your_level_name/load
+    execute if score %level_to_generate pd_generation matches YOUR_LEVEL_ID run function pd_generation:leveldata/tilesets/your_level_name/load
     ```

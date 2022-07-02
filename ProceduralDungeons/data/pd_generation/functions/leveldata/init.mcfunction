@@ -6,14 +6,14 @@ data modify storage procedural_dungeons:level_data all_rooms set value []
 
 
 # call init for the different levels
-function pd_generation:leveldata/bunny_jump/init
-function pd_generation:leveldata/canyon/init
-function pd_generation:leveldata/cave/init
-function pd_generation:leveldata/desert/init
-function pd_generation:leveldata/sewer/init
-function pd_generation:leveldata/skyblock/init
+function pd_generation:leveldata/tilesets/bunny_jump/init
+function pd_generation:leveldata/tilesets/canyon/init
+function pd_generation:leveldata/tilesets/cave/init
+function pd_generation:leveldata/tilesets/desert/init
+function pd_generation:leveldata/tilesets/sewer/init
+function pd_generation:leveldata/tilesets/skyblock/init
 
-function pd_generation:leveldata/demo_test/init
+function pd_generation:leveldata/tilesets/demo_test/init
 
 
 # three fails (to test checks)
