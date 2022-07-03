@@ -2,7 +2,7 @@
 tellraw @a [{"text":"  > generating a ", "color":"gray"},{"storage":"procedural_dungeons:current_level", "nbt":"all_rooms[0].map", "color":"white"},{"text":" level (dim=", "color":"gray"}, {"storage":"procedural_dungeons:current_level", "nbt":"dimension", "color":"white"},{"text":")", "color":"gray"}]
 
 # print room size
-tellraw @a [{"text":"  > contains ", "color":"gray"}, {"score":{"name":"%max_num_rooms","objective":"pd_level_parameters"}, "color":"white"}, {"text":" rooms of size ", "color":"gray"},{"storage":"procedural_dungeons:current_level", "nbt":"size", "color":"white"},{"text":"x", "color":"gray"}, {"storage":"procedural_dungeons:current_level", "nbt":"size", "color":"white"}]
+tellraw @a [{"text":"  > contains rooms of size ", "color":"gray"},{"storage":"procedural_dungeons:current_level", "nbt":"size", "color":"white"},{"text":"x", "color":"gray"}, {"storage":"procedural_dungeons:current_level", "nbt":"size", "color":"white"}]
 
 # print grid size
 scoreboard players set %tmp_1 pd_level_parameters 1

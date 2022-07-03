@@ -7,7 +7,7 @@ kill @e[tag=lab_cursor]
 function pd_generation:alg_labyrinth/finalize_grid
 
 # output
-tellraw @a [{"text":"  > completed layout", "color":"gray"}]
+tellraw @a [{"text":"    > completed layout", "color":"gray"}]
 
 # indicate that the lab is finished
 scoreboard players set %lab_finished pd_level_parameters 1

@@ -22,6 +22,7 @@ scoreboard players reset %tmp_1 pd_level_parameters
 scoreboard players reset %tmp_2 pd_level_parameters
 execute unless score %lab_loop_percentage pd_level_parameters matches 0.. run scoreboard players set %lab_loop_percentage pd_level_parameters 0
 execute unless score %lab_loop_percentage pd_level_parameters matches ..100 run scoreboard players set %lab_loop_percentage pd_level_parameters 100
+execute unless score %priority_percentage pd_level_parameters matches 0..100 run scoreboard players set %priority_percentage pd_level_parameters 100
 
 # update the size
 scoreboard players reset %room_size pd_level_parameters

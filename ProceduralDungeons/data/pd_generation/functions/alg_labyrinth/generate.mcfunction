@@ -1,6 +1,9 @@
 # output
 tellraw @a [{"text":"  > building ", "color":"gray"}, {"text":"labyrinth", "color":"white"}, {"text":" layout", "color":"gray"}]
-tellraw @a [{"text":"  > loop chance ", "color":"gray"},{"score":{"name":"%lab_loop_percentage","objective":"pd_level_parameters"}, "color":"white"},{"text":"%", "color":"white"}]
+
+tellraw @a [{"text":"    > contains ", "color":"gray"}, {"score":{"name":"%max_num_rooms","objective":"pd_level_parameters"}, "color":"white"}, {"text":" rooms", "color":"gray"}]
+tellraw @a [{"text":"    > loop chance ", "color":"gray"},{"score":{"name":"%lab_loop_percentage","objective":"pd_level_parameters"}, "color":"white"},{"text":"%", "color":"white"}]
+
 
 # indicate that the lab is not finished
 scoreboard players set %lab_finished pd_level_parameters 0

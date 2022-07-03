@@ -1,7 +1,11 @@
 # called as a room to collapse
 
-# choose a random variation (based on priority)
-execute at @s run function pd_generation:rooms/variations/choose_priority
+# choose a random variation (based on priority or at random)
+scoreboard players set %LCG_rand_min pd_math 0
+scoreboard players set %LCG_rand_max pd_math 100
+function pd_math:rand/update
+execute if score %LCG_rand pd_math < %priority_percentage pd_level_parameters run execute at @s run function pd_generation:rooms/variations/choose_priority
+execute unless score %LCG_rand pd_math < %priority_percentage pd_level_parameters run execute at @s run function pd_generation:rooms/variations/choose_random
 
 # copy data from the remaining variation
 execute at @s run data modify entity @s data merge from entity @e[tag=pd_room_variation, distance=..0.1, limit=1] data
