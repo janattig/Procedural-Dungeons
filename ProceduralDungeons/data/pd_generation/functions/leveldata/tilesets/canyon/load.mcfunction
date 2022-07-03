@@ -11,4 +11,4 @@ execute store result storage procedural_dungeons:current_level dimension int 1 r
 scoreboard players set %start_y pd_level_parameters 68
 
 # set the post processing height (y) of the algorithm (layers above start_y)
-scoreboard players set %post_processing_size_y pd_level_parameters 32
+scoreboard players set %post_processing_size_y pd_level_parameters 10
