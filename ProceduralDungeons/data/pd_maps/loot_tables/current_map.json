@@ -60,6 +60,11 @@
                   "op": "replace"
                 },
                 {
+                  "source": "priority_percentage",
+                  "target": "priority_percentage",
+                  "op": "replace"
+                },
+                {
                   "source": "portal_target",
                   "target": "portal_target",
                   "op": "replace"
@@ -96,51 +101,6 @@
                 ]
               ],
               "replace": true
-            },
-            {
-              "function": "minecraft:set_lore",
-              "entity": "this",
-              "lore": [
-                [
-                  {
-                    "text": "> contains ",
-                    "color": "gray"
-                  },
-                  {
-                    "nbt": "num_rooms",
-                    "storage": "procedural_dungeons:current_map",
-                    "color": "blue"
-                  },
-                  {
-                    "text": " rooms (",
-                    "color": "gray"
-                  },
-                  {
-                    "nbt": "room_filling_percentage",
-                    "storage": "procedural_dungeons:current_map",
-                    "color": "blue"
-                  },
-                  {
-                    "text": "%)",
-                    "color": "gray"
-                  }
-                ]
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "%is_wavefunction"
-                    },
-                    "score": "pd_maps"
-                  },
-                  "range": 0
-                }
-              ],
-              "replace": false
             },
             {
               "function": "minecraft:set_lore",
@@ -252,6 +212,87 @@
                     "score": "pd_maps"
                   },
                   "range": 1
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "> contains ",
+                    "color": "gray"
+                  },
+                  {
+                    "nbt": "num_rooms",
+                    "storage": "procedural_dungeons:current_map",
+                    "color": "blue"
+                  },
+                  {
+                    "text": " rooms (",
+                    "color": "gray"
+                  },
+                  {
+                    "nbt": "room_filling_percentage",
+                    "storage": "procedural_dungeons:current_map",
+                    "color": "blue"
+                  },
+                  {
+                    "text": "%)",
+                    "color": "gray"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "%is_wavefunction"
+                    },
+                    "score": "pd_maps"
+                  },
+                  "range": 0
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "> priority decisions: ",
+                    "color": "gray"
+                  },
+                  {
+                    "nbt": "priority_percentage",
+                    "storage": "procedural_dungeons:current_map",
+                    "color": "blue"
+                  },
+                  {
+                    "text": "%",
+                    "color": "gray"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "%is_labyrinth"
+                    },
+                    "score": "pd_maps"
+                  },
+                  "range": 0
                 }
               ],
               "replace": false

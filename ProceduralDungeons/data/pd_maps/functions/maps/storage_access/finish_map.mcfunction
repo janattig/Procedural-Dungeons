@@ -115,6 +115,18 @@ scoreboard players reset %tmp pd_maps
 
 
 
+### PRIORITY DECISIONS
+
+# determine correct percentage
+execute if data storage procedural_dungeons:current_map priority_percentage_min if data storage procedural_dungeons:current_map priority_percentage_max run function pd_maps:maps/storage_access/fill_priority_percentage
+
+# default value of priority decisions
+execute unless data storage procedural_dungeons:current_map priority_percentage run data modify storage procedural_dungeons:current_map priority_percentage set value 100
+
+
+
+
+
 ### LOOP CHANCE
 
 # determine correct loop chance

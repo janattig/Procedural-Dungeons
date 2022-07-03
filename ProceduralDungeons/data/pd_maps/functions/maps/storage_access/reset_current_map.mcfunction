@@ -13,6 +13,9 @@
 # - (room filling = 100%)
 #   - room_filling_percentage
 #   - room_filling_percentage_min, room_filling_percentage_max
+# - (priority decisions = 100%)
+#   - priority_percentage
+#   - priority_percentage_min, priority_percentage_max
 # - (loop chance = 10%)
 #   - lab_loop_percentage
 #   - lab_loop_percentage_min, lab_loop_percentage_max
@@ -42,6 +45,9 @@ data remove storage procedural_dungeons:current_map dz
 data remove storage procedural_dungeons:current_map room_filling_percentage
 data remove storage procedural_dungeons:current_map room_filling_percentage_min
 data remove storage procedural_dungeons:current_map room_filling_percentage_max
+data remove storage procedural_dungeons:current_map priority_percentage
+data remove storage procedural_dungeons:current_map priority_percentage_min
+data remove storage procedural_dungeons:current_map priority_percentage_max
 data remove storage procedural_dungeons:current_map num_rooms
 data remove storage procedural_dungeons:current_map lab_loop_percentage
 data remove storage procedural_dungeons:current_map lab_loop_percentage_min
