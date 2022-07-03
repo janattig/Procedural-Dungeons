@@ -51,4 +51,4 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:0, east:0, south:2, west:2, file:"procedural_dungeons:16x16/canyon/16x16_canyon_nesw_0022_2l_plain", priority:1}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:0, east:2, south:1, west:2, file:"procedural_dungeons:16x16/canyon/16x16_canyon_nesw_0212_open", priority:1}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:2, east:0, south:1, west:0, file:"procedural_dungeons:16x16/canyon/16x16_canyon_nesw_2010_opening", priority:1}
-data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:2, east:1, south:0, west:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_4_empty", priority:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"canyon", size:16, north:2, east:1, south:0, west:1, file:"procedural_dungeons:16x16/canyon/16x16_canyon_nesw_2101_empty", priority:1}
