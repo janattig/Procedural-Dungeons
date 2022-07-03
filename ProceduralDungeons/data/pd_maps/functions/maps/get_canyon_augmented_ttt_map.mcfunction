@@ -30,13 +30,13 @@ data modify storage procedural_dungeons:current_map id set value 4
 data modify storage procedural_dungeons:current_map display_name set value "Canyon"
 execute store result storage procedural_dungeons:current_map algorithm int 1 run scoreboard players get %ALG_3_LABYRINTH_WAVE pd_level_parameters
 data modify storage procedural_dungeons:current_map is_ttt set value 1
-data modify storage procedural_dungeons:current_map extent_min set value 5
-data modify storage procedural_dungeons:current_map extent_max set value 8
-data modify storage procedural_dungeons:current_map room_filling_percentage_min set value 40
-data modify storage procedural_dungeons:current_map room_filling_percentage_max set value 80
+data modify storage procedural_dungeons:current_map extent_min set value 4
+data modify storage procedural_dungeons:current_map extent_max set value 7
+data modify storage procedural_dungeons:current_map room_filling_percentage_min set value 50
+data modify storage procedural_dungeons:current_map room_filling_percentage_max set value 100
 data modify storage procedural_dungeons:current_map lab_loop_percentage_min set value 0
 data modify storage procedural_dungeons:current_map lab_loop_percentage_max set value 5
-data modify storage procedural_dungeons:current_map priority_percentage_min set value 30
+data modify storage procedural_dungeons:current_map priority_percentage_min set value 50
 data modify storage procedural_dungeons:current_map priority_percentage_max set value 100
 data modify storage procedural_dungeons:current_map portal_target set value [1.0d, 73.0d, 1.0d]
 
