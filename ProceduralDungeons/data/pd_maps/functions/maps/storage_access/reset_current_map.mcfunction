@@ -45,6 +45,9 @@ data remove storage procedural_dungeons:current_map dz
 data remove storage procedural_dungeons:current_map room_filling_percentage
 data remove storage procedural_dungeons:current_map room_filling_percentage_min
 data remove storage procedural_dungeons:current_map room_filling_percentage_max
+data remove storage procedural_dungeons:current_map num_rooms
+data remove storage procedural_dungeons:current_map num_rooms_min
+data remove storage procedural_dungeons:current_map num_rooms_max
 data remove storage procedural_dungeons:current_map priority_percentage
 data remove storage procedural_dungeons:current_map priority_percentage_min
 data remove storage procedural_dungeons:current_map priority_percentage_max

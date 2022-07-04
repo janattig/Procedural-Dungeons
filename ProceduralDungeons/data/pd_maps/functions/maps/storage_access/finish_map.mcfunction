@@ -13,6 +13,12 @@
 # - (room filling = 100%)
 #   - room_filling_percentage
 #   - room_filling_percentage_min, room_filling_percentage_max
+# - (number of rooms = derived from filling percentage)
+#   - num_rooms
+#   - num_rooms_min, num_rooms_max
+# - (priority decisions = 100%)
+#   - priority_percentage
+#   - priority_percentage_min, priority_percentage_max
 # - (loop chance = 10%)
 #   - lab_loop_percentage
 #   - lab_loop_percentage_min, lab_loop_percentage_max
@@ -95,24 +101,38 @@ scoreboard players reset %tmp_dz pd_maps
 
 ### NUMBER OF ROOMS
 
-# determine correct filling percentage
+# determine correct filling percentage or set it to its default value
 execute if data storage procedural_dungeons:current_map room_filling_percentage_min if data storage procedural_dungeons:current_map room_filling_percentage_max run function pd_maps:maps/storage_access/fill_filling_percentage
-
-# default value of filling
 execute unless data storage procedural_dungeons:current_map room_filling_percentage run data modify storage procedural_dungeons:current_map room_filling_percentage set value 100
+
+# set the number of rooms if boundaries are given
+execute if data storage procedural_dungeons:current_map num_rooms_min if data storage procedural_dungeons:current_map num_rooms_max run function pd_maps:maps/storage_access/fill_num_rooms
+
+# check if recalculating of percentage is needed
+scoreboard players reset %recalculate_room_percentage pd_maps
+execute if data storage procedural_dungeons:current_map num_rooms run scoreboard players set %recalculate_room_percentage pd_maps 1
 
 # calculate the number of rooms
 execute store result score %tmp1 pd_maps run data get storage procedural_dungeons:current_map dx
 execute store result score %tmp2 pd_maps run data get storage procedural_dungeons:current_map dz
 execute store result score %tmp pd_maps run data get storage procedural_dungeons:current_map room_filling_percentage
+execute store result score %tmp_num_rooms pd_maps run data get storage procedural_dungeons:current_map num_rooms
 scoreboard players operation %tmp pd_maps *= %tmp2 pd_maps
 scoreboard players operation %tmp pd_maps *= %tmp1 pd_maps
+scoreboard players operation %tmp_size pd_maps = %tmp1 pd_maps
+scoreboard players operation %tmp_size pd_maps *= %tmp2 pd_maps
 scoreboard players operation %tmp pd_maps /= 100 pd_math
-execute store result storage procedural_dungeons:current_map num_rooms int 1 run scoreboard players get %tmp pd_maps
+execute unless data storage procedural_dungeons:current_map num_rooms run execute store result storage procedural_dungeons:current_map num_rooms int 1 run scoreboard players get %tmp pd_maps
+execute if data storage procedural_dungeons:current_map num_rooms if score %tmp_num_rooms pd_maps > %tmp_size pd_maps run execute store result storage procedural_dungeons:current_map num_rooms int 1 run scoreboard players get %tmp_size pd_maps
 scoreboard players reset %tmp1 pd_maps
 scoreboard players reset %tmp2 pd_maps
 scoreboard players reset %tmp pd_maps
+scoreboard players reset %tmp_size pd_maps
+scoreboard players reset %tmp_num_rooms pd_maps
 
+# maybe recalculate the filling percentage from the number of rooms
+execute if score %recalculate_room_percentage pd_maps matches 1 run function pd_maps:maps/storage_access/determine_filling_percentage
+scoreboard players reset %recalculate_room_percentage pd_maps
 
 
 ### PRIORITY DECISIONS

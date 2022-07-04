@@ -32,8 +32,8 @@ execute store result storage procedural_dungeons:current_map algorithm int 1 run
 data modify storage procedural_dungeons:current_map is_ttt set value 1
 data modify storage procedural_dungeons:current_map extent_min set value 4
 data modify storage procedural_dungeons:current_map extent_max set value 7
-data modify storage procedural_dungeons:current_map room_filling_percentage_min set value 50
-data modify storage procedural_dungeons:current_map room_filling_percentage_max set value 100
+data modify storage procedural_dungeons:current_map num_rooms_min set value 15
+data modify storage procedural_dungeons:current_map num_rooms_max set value 25
 data modify storage procedural_dungeons:current_map lab_loop_percentage_min set value 0
 data modify storage procedural_dungeons:current_map lab_loop_percentage_max set value 5
 data modify storage procedural_dungeons:current_map priority_percentage_min set value 50
