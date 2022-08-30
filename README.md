@@ -34,7 +34,7 @@ To generate levels with Procedural Dungeons, you have to do the following:
       ```mcfunction
       loot give @s loot pd_maps:map_device
       ```
-    and place it somewhere in your world. Then, you can load the contained structure.
+      and place it somewhere in your world. Then, you can load the contained structure.
   2. Obtain a [map item](ProceduralDungeons/data/pd_maps#maps). You can get a *random* map via
       ```mcfunction
       function procedural_dungeons:get_random_ttt_map
