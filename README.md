@@ -31,14 +31,14 @@ It should be noted that Procedural Dungeons itself only adds level generation fe
 
 To generate levels with Procedural Dungeons, you have to do the following:
   1. Build a [map device](ProceduralDungeons/data/pd_maps#map-device). To do so, get the structure block with
-    ```mcfunction
-    loot give @s loot pd_maps:map_device
-    ```
+      ```mcfunction
+      loot give @s loot pd_maps:map_device
+      ```
     and place it somewhere in your world. Then, you can load the contained structure.
   2. Obtain a [map item](ProceduralDungeons/data/pd_maps#maps). You can get a *random* map via
-    ```mcfunction
-    function procedural_dungeons:get_random_ttt_map
-    ```
+      ```mcfunction
+      function procedural_dungeons:get_random_ttt_map
+      ```
   3. Put the map item into the item frame of the map device and hit the button on the sides
 
 The map should now be generated. Enter the map area through one of the portals which now are opened. On the other side, there is a portal that brings you back to the map device.
