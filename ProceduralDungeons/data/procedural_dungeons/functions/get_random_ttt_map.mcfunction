@@ -1,6 +1,6 @@
 # set the boundaries of rng
 scoreboard players set %LCG_rand_min pd_math 1
-scoreboard players set %LCG_rand_max pd_math 6
+scoreboard players set %LCG_rand_max pd_math 8
 
 # new random number
 function pd_math:rand/update
@@ -12,3 +12,5 @@ execute if score %LCG_rand pd_math matches 3 run function pd_maps:maps/get_caves
 execute if score %LCG_rand pd_math matches 4 run function pd_maps:maps/get_desert_ttt_map
 execute if score %LCG_rand pd_math matches 5 run function pd_maps:maps/get_sewers_ttt_map
 execute if score %LCG_rand pd_math matches 6 run function pd_maps:maps/get_skyblock_ttt_map
+execute if score %LCG_rand pd_math matches 7 run function pd_maps:maps/get_canyon_augmented_ttt_map
+execute if score %LCG_rand pd_math matches 8 run function pd_maps:maps/get_bunny_jump_wavefunction_ttt_map
