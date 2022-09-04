@@ -92,4 +92,4 @@ The entirety of Procedural Dungeons is split up into several (mostly independent
 
 5. [`pd_math`](ProceduralDungeons/data/pd_math) contains math related functions, including a linear congruent generator for custom (pseudo) random numbers.
 
-6. [`procedural_dungeons`](ProceduralDungeons/data/procedural_dungeons) is the overarching namespace unifying every other subpackage and including structure data.
+6. [`procedural_dungeons`](ProceduralDungeons/data/procedural_dungeons) is the overarching namespace for top-level functions as well as also including structure data for all levels.

@@ -1,6 +1,6 @@
 # Procedural Dungeons // procedural_dungeons
 
-Sub-repo of the Procedural Dungeons pack providing a unifying namespace for functions with easy access. For a comprehensive summary of the Procedural Dungeons datapack, see the [main page](https://github.com/janattig/Procedural-Dungeons).
+Sub-repo of the Procedural Dungeons pack providing a unifying namespace for functions with easy access as well as providing the structure data for levels. For a comprehensive summary of the Procedural Dungeons datapack, see the [main page](https://github.com/janattig/Procedural-Dungeons).
 
 The following functions are provided:
 
