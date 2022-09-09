@@ -23,9 +23,7 @@
           "height": 67
         }
       ],
-      "structures": {
-        "structures": {}
-      }
+      "structure_overrides": []
     }
   }
 }

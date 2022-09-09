@@ -27,9 +27,7 @@
           "height": 1
         }
       ],
-      "structures": {
-        "structures": {}
-      }
+      "structure_overrides": []
     }
   }
 }
