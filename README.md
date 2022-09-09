@@ -15,7 +15,9 @@ To install the datapack, download and copy the `ProceduralDungeons` folder into 
 ```mcfunction
 datapack list
 ```
-if the datapack is not yet enabled, you can manually enable it with
+(Remember that you have to prepend a `/` when you are typing commands into the Minecraft console).
+
+If the datapack is not yet enabled, you can manually enable it with
 ```mcfunction
 datapack enable "file/ProceduralDungeons"
 ```
