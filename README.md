@@ -4,6 +4,7 @@ Procedural dungeon generation for Minecraft 1.18.2 - 1.19.2, mainly used to gene
 
 For diving right in, check out the [installation](#installation) and the [How to play](#How-to-play--use) sections. If you are looking to extend the pack with your own structures / levels / etc., check out the [Extending the datapack](#extending-the-datapack) section. If you are looking to find detailed description on certain aspects, have a look at the [Datapack structure](#datapack-structure).
 
+You can find an overview over the different map themes [here](ProceduralDungeons/data/procedural_dungeons#showcase-map-themes).
 
 
 
