@@ -6,7 +6,7 @@ scoreboard players set %posY pd_display 0
 scoreboard players set %posZ pd_display 0
 # reset even / odd value
 scoreboard players reset %half pd_display
-scoreboard players reset %evenodd pd_display
+scoreboard players reset %isodd pd_display
 # set tmp values
 scoreboard players set %0 pd_display 0
 scoreboard players set %1 pd_display 1
@@ -48,6 +48,9 @@ execute at @e[tag=pd_display_corner, tag=corner_110] run function pd_room_displa
 
 # kill the cursor
 kill @e[tag=pd_display_cursor]
+# kill all corner markers
+kill @e[tag=pd_display_corner]
+
 
 # reset the current cursor position
 scoreboard players reset %posX pd_display
@@ -57,6 +60,7 @@ scoreboard players reset %cursorX pd_display
 scoreboard players reset %cursorY pd_display
 scoreboard players reset %cursorZ pd_display
 scoreboard players reset %half pd_display
+scoreboard players reset %isodd pd_display
 scoreboard players reset %evenodd pd_display
 # reset temporary variables
 scoreboard players reset %0 pd_display

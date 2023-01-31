@@ -8,3 +8,5 @@ function pd_portals:installation/install
 function pd_generation:installation/install
 # installation of the maps part
 function pd_maps:installation/install
+# installation of the display rooms part
+function pd_room_display:installation/install
