@@ -19,6 +19,9 @@ execute store result score %current_reset_region_size pd_dimensions run data get
 # execute as the marker: copy the volume
 execute as @e[type=marker, tag=pd_dim_reset_marker_tmp] at @s run function pd_dimensions:reset/copy_volume
 
+# if there was no successful reset, queue region again
+execute if score %successful_reset pd_dimensions matches 0 run data modify storage procedural_dungeons:reset_regions to_be_reset append from storage procedural_dungeons:reset_regions resetting[0]
+
 # reset temporary score
 scoreboard players reset %current_reset_region_size pd_dimensions
 # kill the marker

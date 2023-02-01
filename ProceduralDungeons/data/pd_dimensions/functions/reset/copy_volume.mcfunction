@@ -25,3 +25,4 @@ execute unless score %current_reset_region_size pd_dimensions matches 1..19 run 
 execute if score %successful_reset pd_dimensions matches 0 run tellraw @a ["",{"text":"> "},{"text":"PD DIM ERROR:","color":"red"},{"text":" something went wrong during reset (error) "}]
 #execute if score %successful_reset pd_dimensions matches 1 run tellraw @a ["",{"text":"> "},{"text":"PD DIM OK:","color":"green"},{"text":" correctly reset "}]
 execute unless score %successful_reset pd_dimensions matches 0..1 run tellraw @a ["",{"text":"> "},{"text":"PD DIM ERROR:","color":"red"},{"text":" something went wrong during reset (unknown) "}]
+execute unless score %successful_reset pd_dimensions matches 0..1 run scoreboard players set %successful_reset pd_dimensions 0
