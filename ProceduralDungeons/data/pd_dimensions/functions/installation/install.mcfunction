@@ -78,3 +78,10 @@ execute in pd_dimensions:sewer_world run function pd_dimensions:installation/set
 scoreboard players set %skyblock_world pd_dimensions 2
 # setup forceload for the dimension
 execute in pd_dimensions:skyblock_world run function pd_dimensions:installation/setup_forceload_here
+
+
+### mine ###
+# set the dimension number
+scoreboard players set %mine_world pd_dimensions -4
+# setup forceload for the dimension
+execute in pd_dimensions:mine_world run function pd_dimensions:installation/setup_forceload_here

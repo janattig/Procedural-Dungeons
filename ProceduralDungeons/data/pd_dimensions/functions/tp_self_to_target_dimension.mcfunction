@@ -6,3 +6,4 @@ execute if score %target_tp_dimension pd_dimensions = %cave_world pd_dimensions 
 execute if score %target_tp_dimension pd_dimensions = %desert_world pd_dimensions run execute in pd_dimensions:desert_world run tp @s ~ ~ ~
 execute if score %target_tp_dimension pd_dimensions = %sewer_world pd_dimensions run execute in pd_dimensions:sewer_world run tp @s ~ ~ ~
 execute if score %target_tp_dimension pd_dimensions = %skyblock_world pd_dimensions run execute in pd_dimensions:skyblock_world run tp @s ~ ~ ~
+execute if score %target_tp_dimension pd_dimensions = %mine_world pd_dimensions run execute in pd_dimensions:mine_world run tp @s ~ ~ ~

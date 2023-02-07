@@ -7,3 +7,4 @@ execute if predicate pd_dimensions:is_in_cave_world run scoreboard players opera
 execute if predicate pd_dimensions:is_in_desert_world run scoreboard players operation %current_dimension pd_dimensions = %desert_world pd_dimensions
 execute if predicate pd_dimensions:is_in_sewer_world run scoreboard players operation %current_dimension pd_dimensions = %sewer_world pd_dimensions
 execute if predicate pd_dimensions:is_in_skyblock_world run scoreboard players operation %current_dimension pd_dimensions = %skyblock_world pd_dimensions
+execute if predicate pd_dimensions:is_in_mine_world run scoreboard players operation %current_dimension pd_dimensions = %mine_world pd_dimensions

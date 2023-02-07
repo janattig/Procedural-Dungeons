@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 64
+        },
+        {
+          "block": "minecraft:stone",
+          "height": 72
+        }
+      ],
+      "structure_overrides": []
+    }
+  }
+}
