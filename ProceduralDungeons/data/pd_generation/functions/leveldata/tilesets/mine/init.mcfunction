@@ -13,6 +13,7 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 # 2l - WS
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_0011_coal_cavern"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:2, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_0012_minecart_spawn"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, south:2, file:"procedural_dungeons:15x15/mine/15x15_mine_0021_magma_forge"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_0011_startfield_ttt", start:1, ttt_only:1}
 
 # 3 - NEW
