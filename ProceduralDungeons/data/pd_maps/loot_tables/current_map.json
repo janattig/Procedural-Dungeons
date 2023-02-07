@@ -338,6 +338,20 @@
               "name": [
                 [
                   {
+                    "text": "(",
+                    "bold": false
+                  },
+                  {
+                    "nbt": "num_rooms",
+                    "storage": "procedural_dungeons:current_map",
+                    "bold": false,
+                    "color": "blue"
+                  },
+                  {
+                    "text": "r) ",
+                    "bold": false
+                  },
+                  {
                     "nbt": "display_name",
                     "storage": "procedural_dungeons:current_map",
                     "bold": true
@@ -355,6 +369,20 @@
               "entity": "this",
               "name": [
                 [
+                  {
+                    "text": "(",
+                    "bold": false
+                  },
+                  {
+                    "nbt": "num_rooms",
+                    "storage": "procedural_dungeons:current_map",
+                    "bold": false,
+                    "color": "blue"
+                  },
+                  {
+                    "text": "r) ",
+                    "bold": false
+                  },
                   {
                     "nbt": "display_name",
                     "storage": "procedural_dungeons:current_map",
