@@ -17,6 +17,7 @@ execute if score %level_to_generate pd_generation matches 3 run function pd_gene
 execute if score %level_to_generate pd_generation matches 31 run function pd_generation:leveldata/tilesets/desert/load_desert_ruins
 execute if score %level_to_generate pd_generation matches -3 run function pd_generation:leveldata/tilesets/sewer/load
 execute if score %level_to_generate pd_generation matches 2 run function pd_generation:leveldata/tilesets/skyblock/load
+execute if score %level_to_generate pd_generation matches -4 run function pd_generation:leveldata/tilesets/mine/load
 
 execute if score %level_to_generate pd_generation matches 4321 run function pd_generation:leveldata/tilesets/demo_test/load
 

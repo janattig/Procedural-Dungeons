@@ -12,6 +12,7 @@ function pd_generation:leveldata/tilesets/cave/init
 function pd_generation:leveldata/tilesets/desert/init
 function pd_generation:leveldata/tilesets/sewer/init
 function pd_generation:leveldata/tilesets/skyblock/init
+function pd_generation:leveldata/tilesets/mine/init
 
 function pd_generation:leveldata/tilesets/demo_test/init
 
