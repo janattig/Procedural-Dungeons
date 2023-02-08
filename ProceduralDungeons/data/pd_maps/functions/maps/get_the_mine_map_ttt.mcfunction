@@ -31,7 +31,7 @@ data modify storage procedural_dungeons:current_map display_name set value "The 
 execute store result storage procedural_dungeons:current_map algorithm int 1 run scoreboard players get %ALG_3_LABYRINTH_WAVE pd_level_parameters
 data modify storage procedural_dungeons:current_map is_ttt set value 1
 data modify storage procedural_dungeons:current_map extent_min set value 4
-data modify storage procedural_dungeons:current_map extent_max set value 10
+data modify storage procedural_dungeons:current_map extent_max set value 8
 data modify storage procedural_dungeons:current_map room_filling_percentage_min set value 40
 data modify storage procedural_dungeons:current_map room_filling_percentage_max set value 100
 data modify storage procedural_dungeons:current_map lab_loop_percentage_min set value 5
