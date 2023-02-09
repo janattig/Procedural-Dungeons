@@ -11,5 +11,8 @@ execute at @e[tag=pd_border, tag=wfc_force_passable] run execute as @e[tag=pd_bo
 tag @e[tag=pd_room] add wfc_update_needed
 tag @e[tag=pd_border] add wfc_update_needed
 
+# temporarily boost the maximum number of commands which can be run per tick (up from 65536)
+gamerule maxCommandChainLength 1000000
+
 # schedule next phase
 schedule function pd_generation:alg_wave_collapse/phases/3_initial_resolve 1t
