@@ -5,6 +5,8 @@ scoreboard objectives add pd_math dummy
 # setup random number generation
 scoreboard players set %LCG_a pd_math 1664525
 scoreboard players set %LCG_c pd_math 1013904223
+scoreboard players set %LCG_m pd_math 2147483647
+scoreboard players set %LCG_bits pd_math 1024
 scoreboard players set %LCG_current pd_math 1
 scoreboard players set %LCG_rand_min pd_math 0
 scoreboard players set %LCG_rand_max pd_math 10
