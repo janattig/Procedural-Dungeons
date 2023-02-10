@@ -6,6 +6,7 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2000_lava_lake"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2000_storage_cave"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:3, file:"procedural_dungeons:15x15/mine/15x15_mine_3000_diamond_cavern"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:3, file:"procedural_dungeons:15x15/mine/15x15_mine_3000_dripstone_diamond_cave"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2000_startfield_ttt", start:1, ttt_only:1}
 
 # 2i - NS
