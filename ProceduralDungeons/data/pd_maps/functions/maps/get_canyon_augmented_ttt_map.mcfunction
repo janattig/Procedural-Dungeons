@@ -35,8 +35,8 @@ data modify storage procedural_dungeons:current_map extent_max set value 7
 data modify storage procedural_dungeons:current_map num_rooms_min set value 15
 data modify storage procedural_dungeons:current_map num_rooms_max set value 25
 data modify storage procedural_dungeons:current_map lab_loop_percentage_min set value 0
-data modify storage procedural_dungeons:current_map lab_loop_percentage_max set value 5
-data modify storage procedural_dungeons:current_map priority_percentage_min set value 50
+data modify storage procedural_dungeons:current_map lab_loop_percentage_max set value 50
+data modify storage procedural_dungeons:current_map priority_percentage_min set value 10
 data modify storage procedural_dungeons:current_map priority_percentage_max set value 100
 data modify storage procedural_dungeons:current_map portal_target set value [1.0d, 73.0d, 1.0d]
 
