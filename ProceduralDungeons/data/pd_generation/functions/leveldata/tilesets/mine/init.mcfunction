@@ -48,6 +48,7 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 
 # 4 - NSWE
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, east:1, north:1, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_1111_intersection_coal"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, east:3, north:1, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_1313_intersection"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, east:1, north:2, south:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2121_barrel_storage"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, east:3, north:2, south:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2323_diamond_crossing"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, east:1, north:2, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_2113_diamond_crossing"}
@@ -56,5 +57,6 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, east:3, north:2, south:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2321_crater"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, east:3, north:2, south:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2321_diamond_cavern"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, east:2, north:3, south:3, file:"procedural_dungeons:15x15/mine/15x15_mine_3231_diamond_canyon_crossing"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:2, east:1, north:3, south:2, file:"procedural_dungeons:15x15/mine/15x15_mine_3122_intersection_with_cellar"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, east:3, north:2, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_2311_iron_vein_mining"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, east:1, north:2, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_2111_startfield_ttt", start:1, ttt_only:1}
