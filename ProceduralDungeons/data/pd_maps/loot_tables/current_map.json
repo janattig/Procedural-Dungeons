@@ -267,6 +267,42 @@
               "lore": [
                 [
                   {
+                    "text": "> loop chance: ",
+                    "color": "gray"
+                  },
+                  {
+                    "nbt": "lab_loop_percentage",
+                    "storage": "procedural_dungeons:current_map",
+                    "color": "blue"
+                  },
+                  {
+                    "text": "%",
+                    "color": "gray"
+                  }
+                ]
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "%is_lab_wave"
+                    },
+                    "score": "pd_maps"
+                  },
+                  "range": 1
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
                     "text": "> priority decisions: ",
                     "color": "gray"
                   },
