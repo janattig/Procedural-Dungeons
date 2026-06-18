@@ -35,6 +35,7 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 
 # 3 - NEW
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, north:1, east:1, file:"procedural_dungeons:15x15/mine/15x15_mine_1101_intersection_coal"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:2, north:1, east:3, file:"procedural_dungeons:15x15/mine/15x15_mine_1302_mining_curved_intersection"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, north:1, east:3, file:"procedural_dungeons:15x15/mine/15x15_mine_1303_small_canyon"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, north:2, east:1, file:"procedural_dungeons:15x15/mine/15x15_mine_2101_coal_dig"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, north:2, east:1, file:"procedural_dungeons:15x15/mine/15x15_mine_2103_diamond_canyon_opening"}
