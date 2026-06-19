@@ -54,6 +54,7 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, east:3, north:1, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_1313_intersection"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, east:1, north:2, south:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2121_barrel_storage"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, east:3, north:2, south:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2323_diamond_crossing"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, east:3, north:2, south:2, file:"procedural_dungeons:15x15/mine/15x15_mine_2323_giant_bridge"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, east:1, north:2, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_2113_diamond_crossing"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:3, east:1, north:2, south:1, file:"procedural_dungeons:15x15/mine/15x15_mine_2113_simple_intersection"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, west:1, east:3, north:2, south:3, file:"procedural_dungeons:15x15/mine/15x15_mine_2331_emerald_cave_hut"}
