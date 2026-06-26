@@ -105,6 +105,7 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:1, east:3, south:-2, west:3, file:"procedural_dungeons:15x15/mine/15x15_mine_13-23_small_canyon"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:2, east:1, south:-2, west:3, file:"procedural_dungeons:15x15/mine/15x15_mine_21-23_diamond_canyon_opening"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:3, east:1, south:-2, west:1, file:"procedural_dungeons:15x15/mine/15x15_mine_31-21_large_iron_vein"}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:4, east:1, south:-2, west:1, file:"procedural_dungeons:15x15/mine/15x15_mine_41-21_lava_cliff"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:1, east:0, south:0, west:-2, file:"procedural_dungeons:15x15/mine/15x15_mine_100-2_deep_iron_vein"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:1, east:0, south:3, west:-2, file:"procedural_dungeons:15x15/mine/15x15_mine_103-2_water_cave_opening"}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:2, east:0, south:0, west:-2, file:"procedural_dungeons:15x15/mine/15x15_mine_200-2_lava_lake"}
