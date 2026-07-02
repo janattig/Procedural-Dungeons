@@ -1,3 +1,6 @@
+# increment counter
+scoreboard players add %current_variation_checks pd_level_parameters 1
+
 # check in any direction and let the room variations add the respective tag
 tag @s add wfc_me
 execute as @s[tag=wfc_has_north] at @s run execute positioned ~ ~ ~-1 run execute at @e[tag=pd_room, limit=1, sort=nearest] run execute as @e[tag=pd_room_variation, distance=..0.1] run execute if score @s pd_room_border_s = @e[tag=wfc_me, limit=1, sort=nearest] pd_room_border run tag @e[tag=wfc_me, limit=1, sort=nearest] add wfc_north_fine

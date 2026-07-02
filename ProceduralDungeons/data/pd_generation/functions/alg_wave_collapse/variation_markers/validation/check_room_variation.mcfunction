@@ -1,3 +1,6 @@
+# increment counter
+scoreboard players add %current_variation_checks pd_level_parameters 1
+
 # check in any direction and let the border variations add the respective tag
 tag @s add wfc_me
 execute positioned ~ ~ ~-1 run execute at @e[tag=pd_border, limit=1, sort=nearest] run execute as @e[tag=pd_border_variation, distance=..0.1] run execute if score @s pd_room_border = @e[tag=wfc_me, limit=1, sort=nearest] pd_room_border_n run tag @e[tag=wfc_me, limit=1, sort=nearest] add wfc_north_fine

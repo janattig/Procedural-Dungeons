@@ -1,3 +1,6 @@
+# reset variation check counter for this tick
+scoreboard players set %current_variation_checks pd_level_parameters -1
+
 # choose a random uncollapsed room for collapse
 execute as @e[tag=pd_room, tag=!wfc_collapsed, limit=1, sort=random] at @s run function pd_generation:alg_wave_collapse/variation_markers/collapse_room
 

@@ -6,6 +6,8 @@ scoreboard players set %rooms_to_update pd_level_parameters 0
 execute as @e[tag=pd_room, tag=wfc_update_needed] run scoreboard players add %rooms_to_update pd_level_parameters 1
 
 # if there are rooms to update, schedule room resolve, otherwise, schedule next phase entirely
-execute if score %rooms_to_update pd_level_parameters matches 1.. run schedule function pd_generation:alg_wave_collapse/phases/misc/initial_resolve_rooms 1t
+execute if score %rooms_to_update pd_level_parameters matches 1.. if score %current_variation_checks pd_level_parameters >= %max_variation_checks pd_level_parameters run schedule function pd_generation:alg_wave_collapse/phases/misc/initial_resolve_rooms 1t
+execute if score %rooms_to_update pd_level_parameters matches 1.. if score %current_variation_checks pd_level_parameters >= %max_variation_checks pd_level_parameters run scoreboard players set %current_variation_checks pd_level_parameters -1 
+execute if score %rooms_to_update pd_level_parameters matches 1.. if score %current_variation_checks pd_level_parameters < %max_variation_checks pd_level_parameters if score %current_variation_checks pd_level_parameters matches 0.. run function pd_generation:alg_wave_collapse/phases/misc/initial_resolve_rooms
 execute if score %rooms_to_update pd_level_parameters matches 0 run schedule function pd_generation:alg_wave_collapse/phases/4_collapse 1t
 scoreboard players reset %borders_to_update pd_level_parameters
