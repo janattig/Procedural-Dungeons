@@ -1,5 +1,6 @@
 # increment counter
 scoreboard players add %current_variation_checks pd_level_parameters 1
+scoreboard players add %border_variation_checks pd_level_parameters 1
 
 # check in any direction and let the room variations add the respective tag
 tag @s add wfc_me

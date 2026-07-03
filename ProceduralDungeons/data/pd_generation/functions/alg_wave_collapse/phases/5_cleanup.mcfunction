@@ -5,6 +5,8 @@ tellraw @a [{"text":"    > ", "color":"gray"}, {"text":"(5)", "color":"white"}, 
 gamerule maxCommandChainLength 65536
 scoreboard players reset %max_variation_checks pd_level_parameters
 scoreboard players reset %current_variation_checks pd_level_parameters
+scoreboard players reset %room_variation_checks pd_level_parameters
+scoreboard players reset %border_variation_checks pd_level_parameters
 
 # delete all variations (not needed any more)
 kill @e[tag=pd_room_variation]
