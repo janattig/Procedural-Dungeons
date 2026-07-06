@@ -132,8 +132,11 @@ data modify storage procedural_dungeons:level_data all_rooms append value {map:"
 
 # alternative border (open water cave)
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:-3, east:-3, south:3, west:2, file:"procedural_dungeons:15x15/mine/15x15_mine_-3-332_long_bridge", priority:2}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:0, east:-3, south:1, west:3, file:"procedural_dungeons:15x15/mine/15x15_mine_0-313_diamond_canyon_opening", priority:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:1, east:-3, south:3, west:0, file:"procedural_dungeons:15x15/mine/15x15_mine_1-330_water_cave_opening", priority:1}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:3, east:-3, south:0, west:0, file:"procedural_dungeons:15x15/mine/15x15_mine_3-300_diamond_cavern", priority:1}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:3, east:-3, south:0, west:0, file:"procedural_dungeons:15x15/mine/15x15_mine_3-300_dripstone_diamond_cave", priority:1}
+data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:1, east:-3, south:3, west:-3, file:"procedural_dungeons:15x15/mine/15x15_mine_1-33-3_large_cave_bridge", priority:2}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:1, east:0, south:-3, west:0, file:"procedural_dungeons:15x15/mine/15x15_mine_10-30_coal_ending", priority:1}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:1, east:3, south:-3, west:3, file:"procedural_dungeons:15x15/mine/15x15_mine_13-33_small_canyon", priority:1}
 data modify storage procedural_dungeons:level_data all_rooms append value {map:"mine", size:15, north:3, east:3, south:-3, west:3, file:"procedural_dungeons:15x15/mine/15x15_mine_33-33_diamond_iron_cave", priority:1}
